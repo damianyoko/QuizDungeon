@@ -1,562 +1,2338 @@
 [
   {
     "id": "b01",
-    "level": 1,
+    "level": "beginner",
     "category": "vocabulary",
+    "type": "mcq",
     "question": "What does the word 'happy' mean?",
     "options": [
-      "A. Sad",
-      "B. Feeling pleasure or joy",
-      "C. Angry",
-      "D. Tired"
+      "A. Angry",
+      "B. Tired",
+      "C. Joyful",
+      "D. Hungry"
     ],
-    "answer": "B",
-    "explanation": "'Happy' means feeling pleasure or joy. For example: 'She was happy to see her friend.'"
+    "answer": "C",
+    "explanation": "'Happy' means feeling joy or pleasure. It is the opposite of 'sad'."
   },
   {
     "id": "b02",
-    "level": 1,
-    "category": "grammar",
-    "question": "Choose the correct sentence:",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "What is the opposite of 'cold'?",
     "options": [
-      "A. She go to school every day.",
-      "B. She gone to school every day.",
-      "C. She going to school every day.",
-      "D. She goes to school every day."
+      "A. Dark",
+      "B. Wet",
+      "C. Hot",
+      "D. Small"
     ],
-    "answer": "D",
-    "explanation": "With third-person singular subjects (she/he/it), we add -s or -es to the verb in the present simple tense. 'She goes' is correct."
+    "answer": "C",
+    "explanation": "The opposite of 'cold' is 'hot'. These words describe temperature."
   },
   {
     "id": "b03",
-    "level": 1,
-    "category": "vocabulary",
-    "question": "Which word is the opposite of 'big'?",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which article is correct? '___ orange is on the table.'",
     "options": [
-      "A. Large",
-      "B. Huge",
-      "C. Small",
-      "D. Tall"
+      "A. A",
+      "B. An",
+      "C. The",
+      "D. Some"
     ],
-    "answer": "C",
-    "explanation": "'Small' is the opposite (antonym) of 'big'. 'Large' and 'huge' are synonyms of 'big'."
+    "answer": "B",
+    "explanation": "We use 'an' before words that start with a vowel sound. 'Orange' starts with the vowel 'o', so we say 'an orange'."
   },
   {
     "id": "b04",
-    "level": 1,
-    "category": "grammar",
-    "question": "Fill in the blank: 'There ___ two cats in the garden.'",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which word describes something you sit on?",
     "options": [
-      "A. are",
-      "B. is",
-      "C. am",
-      "D. be"
+      "A. Lamp",
+      "B. Window",
+      "C. Chair",
+      "D. Carpet"
     ],
-    "answer": "A",
-    "explanation": "Use 'are' with plural nouns. 'Two cats' is plural, so we say 'There are two cats.'"
+    "answer": "C",
+    "explanation": "A 'chair' is a piece of furniture designed for sitting. A lamp gives light, a window lets in air/light, and a carpet covers the floor."
   },
   {
     "id": "b05",
-    "level": 1,
-    "category": "sentence_structure",
-    "question": "Which is a complete sentence?",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which sentence is correct?",
     "options": [
-      "A. Running in the park.",
-      "B. The dog barks loudly.",
-      "C. Because it was cold.",
-      "D. A big red apple."
+      "A. She goes to school.",
+      "B. She go to school.",
+      "C. She going to school.",
+      "D. She goed to school."
     ],
-    "answer": "B",
-    "explanation": "'The dog barks loudly' has a subject (the dog) and a verb (barks). The other options are incomplete sentences (fragments)."
+    "answer": "A",
+    "explanation": "In present simple tense, third-person singular subjects (he, she, it) require adding -s or -es to the verb. So 'go' becomes 'goes'."
   },
   {
     "id": "b06",
-    "level": 1,
+    "level": "beginner",
     "category": "vocabulary",
-    "question": "What does 'delicious' mean?",
+    "type": "mcq",
+    "question": "What color is the sky on a clear day?",
     "options": [
-      "A. Very tasty",
-      "B. Ugly",
-      "C. Very loud",
-      "D. Very cold"
+      "A. Green",
+      "B. Blue",
+      "C. Red",
+      "D. Yellow"
     ],
-    "answer": "A",
-    "explanation": "'Delicious' means having a very pleasant taste or smell. 'This pizza is delicious!'"
+    "answer": "B",
+    "explanation": "The sky appears blue on a clear day due to how sunlight scatters in the atmosphere. This is also a basic English vocabulary word."
   },
   {
     "id": "b07",
-    "level": 1,
+    "level": "beginner",
     "category": "grammar",
-    "question": "Which sentence uses 'a' or 'an' correctly?",
+    "type": "mcq",
+    "question": "Choose the correct sentence.",
     "options": [
-      "A. She ate a apple.",
-      "B. He saw an dog.",
-      "C. I have an umbrella.",
-      "D. They found a hour ago."
+      "A. There are three cats.",
+      "B. There is three cats.",
+      "C. There are three cat.",
+      "D. There am three cats."
     ],
-    "answer": "C",
-    "explanation": "Use 'an' before words starting with a vowel sound. 'Umbrella' starts with a vowel sound, so 'an umbrella' is correct."
+    "answer": "A",
+    "explanation": "'There are' is used with plural nouns. 'Cats' is plural, so we say 'There are three cats.'"
   },
   {
     "id": "b08",
-    "level": 1,
-    "category": "sentence_structure",
-    "question": "Put the words in the correct order: 'the / reads / boy / book / a'",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which word means a meal you eat in the morning?",
     "options": [
-      "A. A boy the reads book.",
-      "B. Book a the boy reads.",
-      "C. Reads the boy a book.",
-      "D. The boy reads a book."
+      "A. Breakfast",
+      "B. Supper",
+      "C. Brunch",
+      "D. Dinner"
     ],
-    "answer": "D",
-    "explanation": "Basic English sentence order is Subject + Verb + Object. 'The boy' (subject) + 'reads' (verb) + 'a book' (object)."
+    "answer": "A",
+    "explanation": "'Breakfast' is the first meal of the day, eaten in the morning. 'Dinner' and 'supper' are evening meals. 'Brunch' is a late-morning meal combining breakfast and lunch."
   },
   {
     "id": "b09",
-    "level": 1,
-    "category": "reading_comprehension",
-    "question": "Read: 'Maria wakes up at 7 AM. She eats breakfast and then walks to school.' What does Maria do AFTER eating breakfast?",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which pronoun replaces 'the dog'?",
     "options": [
-      "A. She walks to school.",
-      "B. She sleeps.",
-      "C. She watches TV.",
-      "D. She calls her friends."
+      "A. She",
+      "B. They",
+      "C. It",
+      "D. He"
     ],
-    "answer": "A",
-    "explanation": "The text says 'She eats breakfast and then walks to school.' The word 'then' shows the sequence \u2014 walking to school comes after breakfast."
+    "answer": "C",
+    "explanation": "Animals and objects generally use the pronoun 'it' unless we know their gender. 'The dog' \u2192 'It'."
   },
   {
     "id": "b10",
-    "level": 1,
+    "level": "beginner",
     "category": "vocabulary",
-    "question": "Which word means 'to move quickly on foot'?",
+    "type": "mcq",
+    "question": "What does 'big' mean?",
     "options": [
-      "A. Run",
-      "B. Sleep",
-      "C. Sit",
-      "D. Think"
+      "A. Large",
+      "B. Fast",
+      "C. Small",
+      "D. Pretty"
     ],
     "answer": "A",
-    "explanation": "'Run' means to move quickly on foot. 'She can run very fast.'"
+    "explanation": "'Big' and 'large' are synonyms \u2014 they both mean something of great size. 'Small' is the opposite of big."
+  },
+  {
+    "id": "b11",
+    "level": "beginner",
+    "category": "prepositions",
+    "type": "mcq",
+    "question": "The book is ___ the table.",
+    "options": [
+      "A. in",
+      "B. at",
+      "C. on",
+      "D. by"
+    ],
+    "answer": "C",
+    "explanation": "We use 'on' to describe something resting on a surface. The book is sitting on top of the table."
+  },
+  {
+    "id": "b12",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which is the correct past tense of 'eat'?",
+    "options": [
+      "A. Ate",
+      "B. Aten",
+      "C. Eated",
+      "D. Eat"
+    ],
+    "answer": "A",
+    "explanation": "'Eat' is an irregular verb. Its past tense form is 'ate'. Example: 'She ate an apple yesterday.'"
+  },
+  {
+    "id": "b13",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which word is a number?",
+    "options": [
+      "A. Seven",
+      "B. Run",
+      "C. Happy",
+      "D. Red"
+    ],
+    "answer": "A",
+    "explanation": "'Seven' is a number (7). 'Run' is a verb, 'happy' is an adjective, and 'red' is a color/adjective."
+  },
+  {
+    "id": "b14",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Choose the correct question form: '___ you like coffee?'",
+    "options": [
+      "A. Are",
+      "B. Have",
+      "C. Does",
+      "D. Do"
+    ],
+    "answer": "D",
+    "explanation": "We use 'Do' with I, you, we, they in present simple questions. 'Do you like coffee?' is correct."
+  },
+  {
+    "id": "b15",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which word means to move very fast on foot?",
+    "options": [
+      "A. Walk",
+      "B. Sleep",
+      "C. Run",
+      "D. Sit"
+    ],
+    "answer": "C",
+    "explanation": "'Run' means to move quickly on foot. 'Walk' is slower movement, 'sleep' means to rest, and 'sit' means to be seated."
+  },
+  {
+    "id": "b16",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "The sentence 'I am happy' is grammatically correct.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "'I am happy' is correct. With the subject 'I', we use the verb 'am', which is the first-person singular form of 'to be'."
+  },
+  {
+    "id": "b17",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "We use 'a' before words that start with a vowel sound, like 'a apple'.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "This is false. Before words starting with a vowel sound, we use 'an', not 'a'. The correct form is 'an apple'."
+  },
+  {
+    "id": "b18",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "'They is my friends' is a correct English sentence.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "This is false. 'They' is a plural subject, so the correct verb is 'are', not 'is'. The correct sentence is 'They are my friends.'"
+  },
+  {
+    "id": "b19",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "true_false",
+    "question": "The word 'big' and the word 'large' have similar meanings.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. 'Big' and 'large' are synonyms \u2014 both mean of great size. You can often use one instead of the other."
+  },
+  {
+    "id": "b20",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In English, we say 'two cat' when talking about more than one cat.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. In English, regular nouns become plural by adding -s. We say 'two cats', not 'two cat'."
+  },
+  {
+    "id": "b21",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "true_false",
+    "question": "A 'doctor' is a person who treats sick people.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. A doctor is a medical professional who diagnoses and treats illness and injury."
+  },
+  {
+    "id": "b22",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "The past tense of 'go' is 'goed'.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. 'Go' is an irregular verb. Its past tense is 'went', not 'goed'. Example: 'She went to the market yesterday.'"
+  },
+  {
+    "id": "b23",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In English, adjectives usually come before the noun they describe (e.g., 'a red car').",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. In English, adjectives typically come before the noun: 'a red car', 'a big house', 'a happy child'."
+  },
+  {
+    "id": "b24",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "I ___ a student. (to be)",
+    "options": [
+      "A. are",
+      "B. is",
+      "C. be",
+      "D. am"
+    ],
+    "answer": "D",
+    "explanation": "With the subject 'I', we always use 'am'. This is the first-person singular present form of the verb 'to be'."
+  },
+  {
+    "id": "b25",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "She ___ to school every day. (go)",
+    "options": [
+      "A. go",
+      "B. goes",
+      "C. going",
+      "D. went"
+    ],
+    "answer": "B",
+    "explanation": "Third-person singular subjects (she, he, it) take -s or -es in present simple. 'Go' \u2192 'goes'."
+  },
+  {
+    "id": "b26",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "There ___ two books on the desk.",
+    "options": [
+      "A. is",
+      "B. am",
+      "C. be",
+      "D. are"
+    ],
+    "answer": "D",
+    "explanation": "We use 'are' with plural nouns. 'Two books' is plural, so the correct form is 'There are two books'."
+  },
+  {
+    "id": "b27",
+    "level": "beginner",
+    "category": "prepositions",
+    "type": "fill_blank",
+    "question": "The cat is hiding ___ the bed.",
+    "options": [
+      "A. on",
+      "B. under",
+      "C. in",
+      "D. above"
+    ],
+    "answer": "B",
+    "explanation": "'Under' means below something. If the cat is hiding beneath the bed, we say it is under the bed."
+  },
+  {
+    "id": "b28",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "We ___ watching a movie last night.",
+    "options": [
+      "A. was",
+      "B. were",
+      "C. are",
+      "D. is"
+    ],
+    "answer": "B",
+    "explanation": "'We' is a plural subject, so we use 'were' in past continuous tense. 'We were watching a movie last night.'"
+  },
+  {
+    "id": "b29",
+    "level": "beginner",
+    "category": "vocabulary",
+    "type": "fill_blank",
+    "question": "I drink ___ when I am thirsty.",
+    "options": [
+      "A. stone",
+      "B. bread",
+      "C. paper",
+      "D. water"
+    ],
+    "answer": "D",
+    "explanation": "We drink 'water' to satisfy thirst. Stone, paper, and bread are not liquids you can drink."
+  },
+  {
+    "id": "b30",
+    "level": "beginner",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "He ___ not like spicy food.",
+    "options": [
+      "A. does",
+      "B. am",
+      "C. do",
+      "D. did"
+    ],
+    "answer": "A",
+    "explanation": "In present simple negative sentences, 'he/she/it' use 'does not' (doesn't). 'He does not like spicy food.'"
   },
   {
     "id": "i01",
-    "level": 2,
+    "level": "intermediate",
     "category": "grammar",
-    "question": "Which sentence is in the past perfect tense?",
+    "type": "mcq",
+    "question": "Which sentence uses the present perfect correctly?",
     "options": [
-      "A. She was eating dinner.",
-      "B. She had eaten dinner before he arrived.",
-      "C. She has eaten dinner.",
-      "D. She will have eaten dinner."
+      "A. I have seen that movie yesterday.",
+      "B. I saw that movie already.",
+      "C. I did seen that movie.",
+      "D. I have already seen that movie."
     ],
-    "answer": "B",
-    "explanation": "The past perfect uses 'had + past participle'. 'She had eaten' is past perfect, showing an action completed before another past event."
+    "answer": "D",
+    "explanation": "Present perfect is formed with have/has + past participle. 'Already' pairs naturally with present perfect. We do NOT use past time expressions like 'yesterday' with present perfect."
   },
   {
     "id": "i02",
-    "level": 2,
-    "category": "vocabulary",
-    "question": "What does 'ambiguous' mean?",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which is a correct first conditional sentence?",
     "options": [
-      "A. Open to more than one interpretation",
-      "B. Perfectly clear",
-      "C. Extremely difficult",
-      "D. Related to water"
+      "A. If it rains, I would stay home.",
+      "B. If it will rain, I stay home.",
+      "C. If it rained, I will stay home.",
+      "D. If it rains, I will stay home."
     ],
-    "answer": "A",
-    "explanation": "'Ambiguous' means having more than one possible meaning or interpretation. 'His ambiguous statement confused everyone.'"
+    "answer": "D",
+    "explanation": "The first conditional describes real, possible future situations: If + present simple, will + infinitive. 'If it rains, I will stay home.'"
   },
   {
     "id": "i03",
-    "level": 2,
-    "category": "sentence_structure",
-    "question": "Identify the dependent clause in: 'Although it was raining, we went for a walk.'",
+    "level": "intermediate",
+    "category": "phrasal verbs",
+    "type": "mcq",
+    "question": "What does 'give up' mean?",
     "options": [
-      "A. we went for a walk",
-      "B. went for a walk",
-      "C. it was raining, we went",
-      "D. Although it was raining"
+      "A. To stop trying",
+      "B. To lift something high",
+      "C. To donate something",
+      "D. To offer a gift"
     ],
-    "answer": "D",
-    "explanation": "'Although it was raining' is the dependent (subordinate) clause \u2014 it cannot stand alone and depends on the main clause 'we went for a walk.'"
+    "answer": "A",
+    "explanation": "'Give up' is a phrasal verb meaning to quit or stop trying. Example: 'Don't give up \u2014 you can do it!'"
   },
   {
     "id": "i04",
-    "level": 2,
+    "level": "intermediate",
     "category": "grammar",
-    "question": "Choose the correct form: 'If I ___ rich, I would travel the world.'",
+    "type": "mcq",
+    "question": "She told me that she ___ tired.",
     "options": [
-      "A. am",
-      "B. was",
-      "C. were",
-      "D. will be"
+      "A. is",
+      "B. were",
+      "C. was",
+      "D. has been"
     ],
     "answer": "C",
-    "explanation": "In second conditional sentences (hypothetical situations), we use 'were' for all subjects. 'If I were rich' is the grammatically correct form."
+    "explanation": "In reported speech, the verb shifts back in tense (backshift). 'She is tired' becomes 'She told me that she was tired.'"
   },
   {
     "id": "i05",
-    "level": 2,
-    "category": "reading_comprehension",
-    "question": "Read: 'The new restaurant on Fifth Avenue has received mixed reviews. While critics praised the innovative menu, many customers complained about the slow service and high prices.' What is the main idea?",
+    "level": "intermediate",
+    "category": "modal verbs",
+    "type": "mcq",
+    "question": "Which sentence expresses a possibility?",
     "options": [
-      "A. The restaurant has both positive and negative feedback.",
-      "B. Critics love all restaurants.",
-      "C. The restaurant is very popular.",
-      "D. The restaurant will close soon."
+      "A. You must leave now.",
+      "B. She can speak French.",
+      "C. It might rain this afternoon.",
+      "D. He should call his mother."
     ],
-    "answer": "A",
-    "explanation": "'Mixed reviews' and the contrast between praise and complaints show that opinions about the restaurant are divided \u2014 both positive and negative."
+    "answer": "C",
+    "explanation": "'Might' expresses possibility \u2014 something that may or may not happen. 'Must' = obligation, 'can' = ability, 'should' = advice."
   },
   {
     "id": "i06",
-    "level": 2,
+    "level": "intermediate",
     "category": "vocabulary",
-    "question": "The word 'benevolent' most closely means:",
+    "type": "mcq",
+    "question": "What does the idiom 'break the ice' mean?",
     "options": [
-      "A. Cruel and harsh",
-      "B. Lazy and slow",
-      "C. Kind and charitable",
-      "D. Loud and annoying"
+      "A. To smash something frozen",
+      "B. To end a friendship",
+      "C. To start a conversation in an awkward situation",
+      "D. To feel very cold"
     ],
     "answer": "C",
-    "explanation": "'Benevolent' comes from Latin meaning 'well-wishing'. It describes someone who is kind, generous, and charitable toward others."
+    "explanation": "'Break the ice' means to do or say something to relieve tension and make people feel comfortable at the start of a meeting or social event."
   },
   {
     "id": "i07",
-    "level": 2,
+    "level": "intermediate",
     "category": "grammar",
-    "question": "Which sentence correctly uses the present perfect?",
+    "type": "mcq",
+    "question": "Which sentence uses 'since' correctly?",
     "options": [
-      "A. I have saw that movie last week.",
-      "B. He has drove to work this morning.",
-      "C. They have went to Paris yesterday.",
-      "D. She has finished her homework."
+      "A. I have lived here since 2020.",
+      "B. I have lived here since three years.",
+      "C. I live here since 2020.",
+      "D. I lived here since a long time."
     ],
-    "answer": "D",
-    "explanation": "The present perfect is formed with 'have/has + past participle'. 'Finished' is the correct past participle. The others use wrong forms (saw, went, drove instead of seen, gone, driven)."
+    "answer": "A",
+    "explanation": "'Since' is used with a specific point in time and the present perfect tense. 'I have lived here since 2020' is correct. Use 'for' with a duration of time (e.g., 'for three years')."
   },
   {
     "id": "i08",
-    "level": 2,
-    "category": "sentence_structure",
-    "question": "Which sentence uses a relative clause correctly?",
+    "level": "intermediate",
+    "category": "phrasal verbs",
+    "type": "mcq",
+    "question": "What does 'look up' mean in the sentence: 'I'll look up the word in the dictionary.'?",
     "options": [
-      "A. The book who I read was excellent.",
-      "B. The man which lives next door is friendly.",
-      "C. The woman whose car was stolen called the police.",
-      "D. The dog that it barked all night kept me awake."
+      "A. To look above",
+      "B. To search for information",
+      "C. To respect someone",
+      "D. To improve"
     ],
-    "answer": "C",
-    "explanation": "'Whose' is used for possession in relative clauses. 'The woman whose car' is correct. 'Who/that' are for people/things (not 'which' for people, and no extra pronoun like 'it')."
+    "answer": "B",
+    "explanation": "'Look up' in this context means to search for information (in a dictionary, database, etc.). Example: 'Look up the address online.'"
   },
   {
     "id": "i09",
-    "level": 2,
-    "category": "vocabulary",
-    "question": "Choose the word that best completes the sentence: 'The scientist made a ___ discovery that changed our understanding of physics.'",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which sentence uses the second conditional correctly?",
     "options": [
-      "A. underground",
-      "B. groundbreaking",
-      "C. breakground",
-      "D. grounded"
+      "A. If I have money, I will travel the world.",
+      "B. If I had money, I will travel the world.",
+      "C. If I had money, I would travel the world.",
+      "D. If I will have money, I would travel."
     ],
-    "answer": "B",
-    "explanation": "'Groundbreaking' means innovative, pioneering, or revolutionary. It's a compound adjective meaning the discovery was so significant it 'broke new ground.'"
+    "answer": "C",
+    "explanation": "The second conditional describes hypothetical situations: If + past simple, would + infinitive. 'If I had money, I would travel the world.'"
   },
   {
     "id": "i10",
-    "level": 2,
-    "category": "reading_comprehension",
-    "question": "Read: 'Despite investing heavily in advertising, the company saw a 15% decline in sales. Analysts attributed this to a poorly designed product rather than a lack of awareness.' What can be inferred?",
+    "level": "intermediate",
+    "category": "prepositions",
+    "type": "mcq",
+    "question": "We use ___ for specific times of day (e.g., ___ noon, ___ midnight).",
     "options": [
-      "A. The advertising campaign was too expensive.",
-      "B. The company should advertise more.",
-      "C. People knew about the product but didn't want to buy it.",
-      "D. Analysts were wrong about the product."
+      "A. in",
+      "B. on",
+      "C. by",
+      "D. at"
+    ],
+    "answer": "D",
+    "explanation": "We use 'at' for specific points in time: 'at noon', 'at midnight', 'at 3 o'clock'. Use 'in' for months/years/seasons and 'on' for days/dates."
+  },
+  {
+    "id": "i11",
+    "level": "intermediate",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "What does 'punctual' mean?",
+    "options": [
+      "A. Always late",
+      "B. On time",
+      "C. Very polite",
+      "D. Careful"
+    ],
+    "answer": "B",
+    "explanation": "'Punctual' means arriving or doing things at the expected or correct time. A punctual person is never late."
+  },
+  {
+    "id": "i12",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Choose the correct modal: 'You ___ wear a seatbelt. It's the law.'",
+    "options": [
+      "A. must",
+      "B. should",
+      "C. might",
+      "D. can"
+    ],
+    "answer": "A",
+    "explanation": "'Must' expresses strong obligation or legal requirement. Wearing a seatbelt is required by law, so 'must' is the appropriate modal here."
+  },
+  {
+    "id": "i13",
+    "level": "intermediate",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "What does the phrasal verb 'run out of' mean?",
+    "options": [
+      "A. To exercise outside",
+      "B. To escape quickly",
+      "C. To have no more of something",
+      "D. To manage well"
     ],
     "answer": "C",
-    "explanation": "Heavy advertising created awareness, yet sales declined. The 'poorly designed product' was the issue \u2014 meaning people knew about it but found it unsatisfactory."
+    "explanation": "'Run out of' means to use up the entire supply of something. Example: 'We ran out of milk, so I need to buy more.'"
+  },
+  {
+    "id": "i14",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which word correctly completes: 'He has worked here ___ five years.'?",
+    "options": [
+      "A. since",
+      "B. for",
+      "C. ago",
+      "D. during"
+    ],
+    "answer": "B",
+    "explanation": "'For' is used with a period/duration of time in perfect tenses. 'He has worked here for five years.' Use 'since' with a specific start point (e.g., since 2019)."
+  },
+  {
+    "id": "i15",
+    "level": "intermediate",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which word is a synonym for 'angry'?",
+    "options": [
+      "A. Furious",
+      "B. Pleased",
+      "C. Nervous",
+      "D. Bored"
+    ],
+    "answer": "A",
+    "explanation": "'Furious' is a strong synonym for 'angry'. It means very upset or enraged. 'Pleased' means happy, 'nervous' means anxious, 'bored' means uninterested."
+  },
+  {
+    "id": "i16",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "The present perfect tense can be used with time expressions like 'yesterday' or 'last year'.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. Present perfect is NOT used with specific finished past time expressions like 'yesterday' or 'last year'. Use simple past instead. Example: 'I saw her yesterday' (not 'I have seen her yesterday')."
+  },
+  {
+    "id": "i17",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In the second conditional, we use 'would' in the if-clause.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. In the second conditional, 'would' goes in the main clause, NOT the if-clause. Correct form: 'If I had time (if-clause), I would help you (main clause).'"
+  },
+  {
+    "id": "i18",
+    "level": "intermediate",
+    "category": "phrasal verbs",
+    "type": "true_false",
+    "question": "The phrasal verb 'put off' means to postpone or delay something.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. 'Put off' means to postpone or delay. Example: 'She put off doing her homework until the last minute.'"
+  },
+  {
+    "id": "i19",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "'Must' and 'have to' always have exactly the same meaning in all contexts.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. While both express obligation, 'must' usually comes from the speaker's own feeling, while 'have to' comes from external rules or circumstances. 'I must call her' (personal feeling) vs 'I have to wear a uniform at work' (rule)."
+  },
+  {
+    "id": "i20",
+    "level": "intermediate",
+    "category": "vocabulary",
+    "type": "true_false",
+    "question": "The idiom 'bite the bullet' means to endure a painful situation with courage.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. 'Bite the bullet' means to endure a painful or difficult situation bravely. Example: 'I hate going to the dentist, but I bit the bullet and made an appointment.'"
+  },
+  {
+    "id": "i21",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "'For' is used with a specific point in time in sentences with present perfect (e.g., 'I've lived here for 2019').",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. 'Since' is used with a specific point in time (e.g., 'since 2019'). 'For' is used with a duration (e.g., 'for three years'). 'I've lived here since 2019' is correct."
+  },
+  {
+    "id": "i22",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "Reported speech often requires shifting the verb tense back (backshift).",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. In reported speech, verb tenses typically shift back: present simple \u2192 past simple, past simple \u2192 past perfect. Example: 'I am tired' \u2192 She said she was tired."
+  },
+  {
+    "id": "i23",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "You can use 'can' to make polite requests in formal situations.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. 'Can' is informal. For polite or formal requests, 'could' or 'would' are preferred. 'Can you help me?' is casual; 'Could you help me?' is more polite."
+  },
+  {
+    "id": "i24",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "If I ___ more time, I would learn a new language.",
+    "options": [
+      "A. have",
+      "B. had",
+      "C. will have",
+      "D. would have"
+    ],
+    "answer": "B",
+    "explanation": "In the second conditional, the if-clause uses past simple. 'If I had more time...' expresses a hypothetical or unreal situation."
+  },
+  {
+    "id": "i25",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "She has ___ eaten dinner, so she isn't hungry.",
+    "options": [
+      "A. yet",
+      "B. already",
+      "C. still",
+      "D. just now"
+    ],
+    "answer": "B",
+    "explanation": "'Already' is used in positive sentences with present perfect to say something happened sooner than expected. 'Yet' is for questions/negatives. 'She has already eaten dinner.'"
+  },
+  {
+    "id": "i26",
+    "level": "intermediate",
+    "category": "phrasal verbs",
+    "type": "fill_blank",
+    "question": "I can't ___ with all this noise \u2014 please be quiet!",
+    "options": [
+      "A. put down",
+      "B. put on",
+      "C. put off",
+      "D. put up"
+    ],
+    "answer": "D",
+    "explanation": "'Put up with' means to tolerate something unpleasant. 'I can't put up with all this noise' means the noise is unbearable."
+  },
+  {
+    "id": "i27",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "He said he ___ call me back in an hour.",
+    "options": [
+      "A. would",
+      "B. will",
+      "C. should",
+      "D. can"
+    ],
+    "answer": "A",
+    "explanation": "In reported speech, 'will' becomes 'would'. He said (direct): 'I will call you back.' \u2192 Reported: 'He said he would call me back.'"
+  },
+  {
+    "id": "i28",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "You ___ see a doctor if you're feeling that unwell.",
+    "options": [
+      "A. might",
+      "B. should",
+      "C. can",
+      "D. would"
+    ],
+    "answer": "B",
+    "explanation": "'Should' expresses advice or recommendation. 'You should see a doctor' means it's the advisable thing to do."
+  },
+  {
+    "id": "i29",
+    "level": "intermediate",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "She has worked at this company ___ she graduated from university.",
+    "options": [
+      "A. for",
+      "B. since",
+      "C. during",
+      "D. ago"
+    ],
+    "answer": "B",
+    "explanation": "'Since' introduces a specific point in time with present perfect. 'Since she graduated' tells us the starting point of her employment."
+  },
+  {
+    "id": "i30",
+    "level": "intermediate",
+    "category": "vocabulary",
+    "type": "fill_blank",
+    "question": "The meeting was ___; everyone left knowing exactly what to do next. (productive)",
+    "options": [
+      "A. wasteful",
+      "B. productive",
+      "C. fruitless",
+      "D. boring"
+    ],
+    "answer": "B",
+    "explanation": "'Productive' means achieving a significant amount of useful results. A productive meeting results in clear decisions and actions."
   },
   {
     "id": "a01",
-    "level": 3,
+    "level": "advanced",
     "category": "grammar",
-    "question": "Which sentence demonstrates correct use of the subjunctive mood?",
+    "type": "mcq",
+    "question": "Which sentence correctly uses the passive voice?",
     "options": [
-      "A. The doctor recommended that he take more rest.",
-      "B. The doctor recommended that he takes more rest.",
-      "C. The doctor recommended that he is taking more rest.",
-      "D. The doctor recommended that he took more rest."
+      "A. The scientist discovered a new element.",
+      "B. A new element was discovered by the scientist.",
+      "C. A new element discovered by the scientist.",
+      "D. The scientist was discovered the element."
     ],
-    "answer": "A",
-    "explanation": "The subjunctive mood uses the base form of the verb (without -s/-es) after expressions like 'recommend that', 'suggest that', 'insist that'. 'That he take' is correct subjunctive."
+    "answer": "B",
+    "explanation": "Passive voice is formed with: subject + be (conjugated) + past participle. 'A new element was discovered by the scientist' is the correct passive construction."
   },
   {
     "id": "a02",
-    "level": 3,
+    "level": "advanced",
     "category": "vocabulary",
-    "question": "The word 'sycophantic' describes someone who is:",
+    "type": "mcq",
+    "question": "Which word best completes the sentence? 'Her argument was so ___ that the entire committee changed their vote.'",
     "options": [
-      "A. Extremely talented and gifted",
-      "B. Openly hostile and aggressive",
-      "C. Deeply philosophical and thoughtful",
-      "D. Excessively flattering to gain favor"
+      "A. verbose",
+      "B. ambiguous",
+      "C. compelling",
+      "D. tentative"
     ],
-    "answer": "D",
-    "explanation": "'Sycophantic' describes someone who uses excessive flattery or insincere praise to gain advantage. A sycophant is often called a 'yes-man' or flatterer."
+    "answer": "C",
+    "explanation": "'Compelling' means persuasive, convincing, or evoking strong interest. 'Verbose' means using too many words, 'ambiguous' means unclear, 'tentative' means hesitant."
   },
   {
     "id": "a03",
-    "level": 3,
-    "category": "sentence_structure",
-    "question": "Identify the rhetorical device: 'The silence was deafening.'",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which sentence contains correct subject-verb inversion?",
     "options": [
-      "A. Alliteration",
-      "B. Oxymoron",
-      "C. Hyperbole",
-      "D. Simile"
+      "A. Rarely have I seen such talent.",
+      "B. Rarely I have seen such talent.",
+      "C. Rarely I seen have such talent.",
+      "D. Rarely seen I have such talent."
     ],
-    "answer": "B",
-    "explanation": "An oxymoron combines contradictory terms for effect. 'Silence' (absence of sound) and 'deafening' (extremely loud) are contradictory, creating emphasis on the profundity of the silence."
+    "answer": "A",
+    "explanation": "After negative adverbs like 'rarely', 'never', 'seldom', the auxiliary verb comes before the subject (inversion). 'Rarely have I seen...' is correct."
   },
   {
     "id": "a04",
-    "level": 3,
-    "category": "grammar",
-    "question": "Choose the correct sentence with a dangling modifier:",
+    "level": "advanced",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "What does 'ephemeral' mean?",
     "options": [
-      "A. Walking to the store, the rain began to fall. (This is incorrect \u2014 identify it)",
-      "B. Both A and C contain dangling modifiers.",
-      "C. Having finished the report, it was submitted.",
-      "D. Walking to the store, she noticed the rain."
+      "A. Lasting forever",
+      "B. Lasting for a very short time",
+      "C. Extremely beautiful",
+      "D. Slightly confusing"
     ],
     "answer": "B",
-    "explanation": "A dangling modifier lacks a clear subject. In A, 'walking' implies the rain was walking. In C, 'having finished' implies 'it' finished the report. Both are incorrect. B is correct because 'she' is walking."
+    "explanation": "'Ephemeral' means lasting for a very short time; transitory. Example: 'The beauty of cherry blossoms is ephemeral \u2014 they last only a few weeks.'"
   },
   {
     "id": "a05",
-    "level": 3,
-    "category": "reading_comprehension",
-    "question": "Read: 'The Luddites, often mischaracterized as simply anti-technology, were in fact skilled craftsmen who opposed specific machinery introduced during the Industrial Revolution that threatened their livelihoods and craft traditions.' What is the author's purpose?",
+    "level": "advanced",
+    "category": "collocations",
+    "type": "mcq",
+    "question": "Which collocation is correct?",
     "options": [
-      "A. To argue that technology is harmful.",
-      "B. To explain how machines work.",
-      "C. To celebrate the Industrial Revolution.",
-      "D. To correct a common misconception about the Luddites."
+      "A. Have a mistake",
+      "B. Do a mistake",
+      "C. Make a mistake",
+      "D. Take a mistake"
     ],
-    "answer": "D",
-    "explanation": "The phrase 'often mischaracterized' signals the author is correcting a misconception. The author clarifies the Luddites had specific economic grievances, not blanket anti-technology views."
+    "answer": "C",
+    "explanation": "In English, we 'make a mistake', not 'do' or 'have' one. Collocations are fixed word combinations. Other common ones: make a decision, make progress, do homework."
   },
   {
     "id": "a06",
-    "level": 3,
-    "category": "vocabulary",
-    "question": "Which word is most similar in meaning to 'ephemeral'?",
+    "level": "advanced",
+    "category": "register",
+    "type": "mcq",
+    "question": "Which phrase would be most appropriate in a formal business email?",
     "options": [
-      "A. Transient",
-      "B. Permanent",
-      "C. Substantial",
-      "D. Elaborate"
+      "A. I am writing to inquire about the status of the report.",
+      "B. What's up with the report?",
+      "C. Hey, just checking in!",
+      "D. Gimme an update on the report ASAP."
     ],
     "answer": "A",
-    "explanation": "'Ephemeral' means lasting for a very short time. 'Transient' shares this meaning \u2014 both describe something fleeting or short-lived. 'Permanent' is an antonym."
+    "explanation": "Formal written English uses complete sentences, polite phrasing, and avoids slang. 'I am writing to inquire about...' is professional and appropriate for business communication."
   },
   {
     "id": "a07",
-    "level": 3,
-    "category": "sentence_structure",
-    "question": "Which sentence uses parallel structure correctly?",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Choose the sentence that correctly uses the subjunctive mood.",
     "options": [
-      "A. She likes hiking, to swim, and to run cycling.",
-      "B. She likes hike, swim, and cycling.",
-      "C. She likes to hike, swimming, and cycling.",
-      "D. She likes hiking, swimming, and cycling."
+      "A. The doctor recommended that he rests.",
+      "B. The doctor recommended that he is resting.",
+      "C. The doctor recommended that he would rest.",
+      "D. The doctor recommended that he rest."
     ],
     "answer": "D",
-    "explanation": "Parallel structure requires the same grammatical form for items in a series. 'Hiking, swimming, and cycling' all use the gerund (-ing) form, making the sentence grammatically balanced."
+    "explanation": "The subjunctive is used after 'recommend', 'suggest', 'insist' etc. The verb stays in its base form regardless of the subject. 'He rest' (not 'he rests') is correct in subjunctive."
   },
   {
     "id": "a08",
-    "level": 3,
-    "category": "grammar",
-    "question": "Select the sentence with correct punctuation for a non-restrictive clause:",
+    "level": "advanced",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "What does 'ubiquitous' mean?",
     "options": [
-      "A. My brother who lives in London called me yesterday.",
-      "B. My brother, who lives in London, called me yesterday.",
-      "C. My brother; who lives in London, called me yesterday.",
-      "D. My brother \u2014 who lives in London called me yesterday."
+      "A. Present or appearing everywhere",
+      "B. Rare and hard to find",
+      "C. Extremely expensive",
+      "D. Impossible to understand"
     ],
-    "answer": "B",
-    "explanation": "Non-restrictive (non-essential) clauses must be set off with commas. Since the speaker has only one brother, 'who lives in London' is non-restrictive additional information requiring commas."
+    "answer": "A",
+    "explanation": "'Ubiquitous' means seemingly present everywhere at the same time. Example: 'Smartphones have become ubiquitous in modern life.'"
   },
   {
     "id": "a09",
-    "level": 3,
-    "category": "reading_comprehension",
-    "question": "Read: 'While proponents argue that social media fosters global connectivity, critics contend that it amplifies tribalism, creates echo chambers, and diminishes the quality of civic discourse.' The word 'contend' most nearly means:",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which sentence demonstrates a correct use of the past perfect?",
     "options": [
-      "A. Agree strongly",
-      "B. Doubt or question",
-      "C. Assert or argue",
-      "D. Ignore or dismiss"
+      "A. By the time she arrived, he left.",
+      "B. By the time she arrived, he was leaving.",
+      "C. By the time she arrived, he has left.",
+      "D. By the time she arrived, he had left."
     ],
-    "answer": "C",
-    "explanation": "'Contend' means to assert something as a position in an argument or debate. Critics are making a counter-argument \u2014 they are asserting or arguing their position."
+    "answer": "D",
+    "explanation": "Past perfect (had + past participle) is used for an action that was completed BEFORE another past action. 'He had left' happened before 'she arrived'."
   },
   {
     "id": "a10",
-    "level": 3,
+    "level": "advanced",
     "category": "vocabulary",
-    "question": "The prefix 'mal-' in words like 'malfunction', 'malevolent', and 'malnutrition' means:",
+    "type": "mcq",
+    "question": "Which pair are false friends (words that look similar but have different meanings in two languages or contexts)?",
     "options": [
-      "A. Bad, wrong, or ill",
-      "B. Good or well",
-      "C. Half or partial",
-      "D. After or behind"
+      "A. 'cat' and 'hat'",
+      "B. 'actually' (English) vs 'actuellement' (French, meaning 'currently')",
+      "C. 'run' and 'ran'",
+      "D. 'big' and 'large'"
+    ],
+    "answer": "B",
+    "explanation": "'Actually' in English means 'in reality', but the French 'actuellement' means 'currently/now'. These are false friends \u2014 words that look alike across languages but differ in meaning."
+  },
+  {
+    "id": "a11",
+    "level": "advanced",
+    "category": "discourse markers",
+    "type": "mcq",
+    "question": "Which discourse marker best introduces a contrast?",
+    "options": [
+      "A. Nevertheless",
+      "B. Furthermore",
+      "C. Therefore",
+      "D. Likewise"
     ],
     "answer": "A",
-    "explanation": "The Latin prefix 'mal-' means bad, wrong, or ill. Malfunction = working badly; malevolent = wishing ill; malnutrition = poor nutrition. Recognizing prefixes helps decode unfamiliar words."
+    "explanation": "'Nevertheless' (or 'however', 'nonetheless') introduces a contrast or concession. 'Therefore' shows result, 'furthermore'/'likewise' add information."
+  },
+  {
+    "id": "a12",
+    "level": "advanced",
+    "category": "collocations",
+    "type": "mcq",
+    "question": "Which collocation is correct? 'She ___ a speech at the graduation ceremony.'",
+    "options": [
+      "A. made",
+      "B. did",
+      "C. told",
+      "D. said"
+    ],
+    "answer": "A",
+    "explanation": "We 'make a speech', not 'do', 'tell', or 'say' a speech. Other 'make' collocations: make an effort, make progress, make an announcement."
+  },
+  {
+    "id": "a13",
+    "level": "advanced",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "What does 'ameliorate' mean?",
+    "options": [
+      "A. To make worse",
+      "B. To make better or more tolerable",
+      "C. To completely destroy",
+      "D. To carefully examine"
+    ],
+    "answer": "B",
+    "explanation": "'Ameliorate' means to make something bad or unsatisfactory better. Example: 'The new policy aims to ameliorate living conditions in the region.'"
+  },
+  {
+    "id": "a14",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Identify the error in this sentence: 'The data shows that the number of users are increasing.'",
+    "options": [
+      "A. 'are' should be 'is' because 'number' is the subject",
+      "B. 'data' should be 'datum'",
+      "C. 'increasing' should be 'increase'",
+      "D. There is no error."
+    ],
+    "answer": "A",
+    "explanation": "The subject of the verb is 'the number' (singular), not 'users'. 'The number of users IS increasing' is correct. Compare: 'A number of users ARE increasing' (a number = several)."
+  },
+  {
+    "id": "a15",
+    "level": "advanced",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which sentence uses 'ironic' correctly?",
+    "options": [
+      "A. It's ironic that it rained on my birthday \u2014 how annoying.",
+      "B. It's ironic that the fire station burned down.",
+      "C. It's ironic that I love pizza.",
+      "D. It's ironic that she has brown hair."
+    ],
+    "answer": "B",
+    "explanation": "True irony involves a striking contradiction or reversal of expectation. A fire station burning down is genuinely ironic \u2014 the place meant to prevent fires was destroyed by fire. Rain on a birthday is merely unfortunate, not ironic."
+  },
+  {
+    "id": "a16",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In passive voice, the agent (the doer) must always be mentioned.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. The agent is often omitted in passive voice, especially when it's unknown, unimportant, or obvious. Example: 'The window was broken' (we don't know or care who broke it)."
+  },
+  {
+    "id": "a17",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "The sentence 'Had I known about the problem, I would have helped' uses correct inversion in a conditional.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. This is a formal inversion of the third conditional. 'Had I known' = 'If I had known'. Inversion with had/were/should is used in formal written English instead of 'if'."
+  },
+  {
+    "id": "a18",
+    "level": "advanced",
+    "category": "vocabulary",
+    "type": "true_false",
+    "question": "'Disinterested' and 'uninterested' mean exactly the same thing.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. 'Disinterested' means impartial or unbiased (e.g., a disinterested judge). 'Uninterested' means not interested, bored. These are commonly confused but have distinct meanings."
+  },
+  {
+    "id": "a19",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In English, you can end a sentence with a preposition, as in 'This is the book I was telling you about.'",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. Modern English grammar accepts sentence-final prepositions. The 'rule' against it came from Latin-based prescriptivism. 'This is the book I was telling you about' is perfectly natural."
+  },
+  {
+    "id": "a20",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "The subjunctive mood in English always uses a different form from the indicative.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. The subjunctive is only visibly different from the indicative in the third-person singular present (where -s is dropped: 'he go' not 'he goes') and in the past of 'to be' ('were' instead of 'was')."
+  },
+  {
+    "id": "a21",
+    "level": "advanced",
+    "category": "collocations",
+    "type": "true_false",
+    "question": "In English, we say 'do a decision' rather than 'make a decision'.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. The correct collocation is 'make a decision'. Many nouns collocate with either 'make' or 'do': make a decision, make an effort, do homework, do business."
+  },
+  {
+    "id": "a22",
+    "level": "advanced",
+    "category": "discourse markers",
+    "type": "true_false",
+    "question": "'However' can be used at the beginning of a sentence to introduce a contrasting idea.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. 'However' is a common discourse marker used to introduce contrast. Example: 'The plan seemed good. However, it had a major flaw.' It can appear at the start, middle, or end of a clause."
+  },
+  {
+    "id": "a23",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "The sentence 'Everyone must bring their own lunch' uses incorrect grammar because 'everyone' is singular.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. While 'everyone' is grammatically singular, using singular 'his or her' is awkward and increasingly old-fashioned. Singular 'they/their' with 'everyone' is now widely accepted in standard English."
+  },
+  {
+    "id": "a24",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "Not only ___ she finish the project early, but she also exceeded expectations.",
+    "options": [
+      "A. has",
+      "B. did",
+      "C. was",
+      "D. had"
+    ],
+    "answer": "B",
+    "explanation": "After 'Not only' at the start of a sentence, subject-auxiliary inversion is required. 'Not only did she finish...' is correct. The positive: 'She not only finished the project early...'"
+  },
+  {
+    "id": "a25",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "The report ___ by the committee before the deadline, but technical issues prevented it.",
+    "options": [
+      "A. was submitted",
+      "B. had been submitted",
+      "C. would have been submitted",
+      "D. should have been submitted"
+    ],
+    "answer": "C",
+    "explanation": "'Would have been submitted' expresses an unreal past result \u2014 the submission didn't happen because of technical issues. This is a third conditional passive construction."
+  },
+  {
+    "id": "a26",
+    "level": "advanced",
+    "category": "vocabulary",
+    "type": "fill_blank",
+    "question": "The politician's speech was full of ___ \u2014 it sounded impressive but said nothing meaningful.",
+    "options": [
+      "A. rhetoric",
+      "B. clarity",
+      "C. candor",
+      "D. precision"
+    ],
+    "answer": "A",
+    "explanation": "'Rhetoric' can mean the art of persuasion, but in this context it refers to impressive-sounding language that lacks substance. 'Candor' means honesty, 'clarity' means clearness."
+  },
+  {
+    "id": "a27",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "I suggest that he ___ the contract before signing it.",
+    "options": [
+      "A. review",
+      "B. reviews",
+      "C. would review",
+      "D. reviewed"
+    ],
+    "answer": "A",
+    "explanation": "After 'suggest that', the subjunctive is used. The verb stays in its base form: 'he review' (not 'he reviews'). This is the formal subjunctive in English."
+  },
+  {
+    "id": "a28",
+    "level": "advanced",
+    "category": "register",
+    "type": "fill_blank",
+    "question": "The meeting has been ___ until further notice. (postponed \u2014 formal word)",
+    "options": [
+      "A. called off",
+      "B. put back",
+      "C. pushed",
+      "D. deferred"
+    ],
+    "answer": "D",
+    "explanation": "'Deferred' is the formal/academic register equivalent of 'postponed'. 'Called off' means cancelled, 'put back' and 'pushed' are informal alternatives."
+  },
+  {
+    "id": "a29",
+    "level": "advanced",
+    "category": "vocabulary",
+    "type": "fill_blank",
+    "question": "Her writing style was ___, using complex sentences and rare vocabulary to convey simple ideas.",
+    "options": [
+      "A. lucid",
+      "B. succinct",
+      "C. concise",
+      "D. pedantic"
+    ],
+    "answer": "D",
+    "explanation": "'Pedantic' means excessively concerned with minor details or rules, or using unnecessarily complex language. 'Lucid' and 'concise' mean clear and brief, which is the opposite of what the sentence describes."
+  },
+  {
+    "id": "a30",
+    "level": "advanced",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "___ the heavy rain, the outdoor concert continued as planned.",
+    "options": [
+      "A. Although",
+      "B. However",
+      "C. Despite",
+      "D. Even though"
+    ],
+    "answer": "C",
+    "explanation": "'Despite' is followed by a noun or noun phrase (not a clause). 'Despite the heavy rain' is correct. 'Although' and 'even though' must be followed by a subject + verb clause."
   },
   {
     "id": "e01",
-    "level": 4,
+    "level": "expert",
     "category": "grammar",
-    "question": "Which sentence correctly uses the passive causative?",
+    "type": "mcq",
+    "question": "Which sentence demonstrates correct use of the 'mixed conditional'?",
     "options": [
-      "A. She cut her hair yesterday.",
-      "B. She was cutting her hair yesterday.",
-      "C. She had her hair cut yesterday.",
-      "D. Her hair was cut by herself."
+      "A. If I had studied harder, I would pass the exam.",
+      "B. If I had studied harder, I would have passed the exam.",
+      "C. If I study harder, I will pass the exam.",
+      "D. If I had studied harder, I would be in a better position now."
     ],
-    "answer": "C",
-    "explanation": "The passive causative ('have/get + object + past participle') indicates someone arranged for another to perform an action. 'She had her hair cut' means a hairdresser cut it for her."
+    "answer": "D",
+    "explanation": "A mixed conditional combines a third conditional if-clause (past perfect) with a second conditional result (would + infinitive), linking a past action to a present consequence. 'If I had studied harder' (past) \u2192 'I would be in a better position now' (present)."
   },
   {
     "id": "e02",
-    "level": 4,
+    "level": "expert",
     "category": "vocabulary",
-    "question": "Which word best describes someone who 'takes perverse pleasure in others' misfortune'?",
+    "type": "mcq",
+    "question": "What does 'tendentious' mean?",
     "options": [
-      "A. Empathetic",
-      "B. Schadenfreude (as an adjective: schadenfroh)",
-      "C. Misanthropic",
-      "D. Sardonic"
+      "A. Showing great care and sensitivity",
+      "B. Requiring immediate attention",
+      "C. Extremely fragile or delicate",
+      "D. Promoting a particular cause or point of view"
     ],
     "answer": "D",
-    "explanation": "While 'schadenfreude' (German loanword) is the noun, 'sardonic' describes a cynical, mocking humor often at others' expense. However, technically the closest concept is misanthropic disdain. 'Sardonic' = grimly mocking. The question tests nuanced vocabulary."
+    "explanation": "'Tendentious' means expressing or promoting a particular cause or viewpoint, often in an unfair or one-sided way. Example: 'The documentary was criticized for being tendentious rather than objective.'"
   },
   {
     "id": "e03",
-    "level": 4,
-    "category": "sentence_structure",
-    "question": "Identify the type of sentence: 'Had I known about the traffic, I would have left earlier.'",
+    "level": "expert",
+    "category": "error correction",
+    "type": "mcq",
+    "question": "Identify the subtle grammatical error: 'The jury have reached their verdict after deliberating for over ten hours.'",
     "options": [
-      "A. Second conditional",
-      "B. Third conditional inverted",
-      "C. Mixed conditional",
-      "D. Zero conditional"
+      "A. 'have' should be 'has' \u2014 jury is always singular",
+      "B. 'their' should be 'its'",
+      "C. There is no error \u2014 British English treats collective nouns as plural",
+      "D. 'deliberating' should be 'to deliberate'"
     ],
-    "answer": "B",
-    "explanation": "This is an inverted third conditional. The 'if' clause is replaced by inversion: 'Had I known' = 'If I had known'. Inversion is a formal alternative to the standard 'if' construction."
+    "answer": "C",
+    "explanation": "In British English, collective nouns like 'jury', 'team', and 'government' can take plural verbs when emphasizing the individuals within the group. Both 'The jury has' (American) and 'The jury have' (British) are correct in their respective varieties."
   },
   {
     "id": "e04",
-    "level": 4,
-    "category": "grammar",
-    "question": "Which sentence demonstrates correct use of a future perfect progressive?",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which word is closest in meaning to 'laconic'?",
     "options": [
-      "A. By next year, she will work here for a decade.",
-      "B. By next year, she has been working here for a decade.",
-      "C. By next year, she will have been working here for a decade.",
-      "D. By next year, she would have worked here for a decade."
+      "A. Talkative and expressive",
+      "B. Brief and to the point",
+      "C. Sad and melancholic",
+      "D. Dishonest and cunning"
     ],
-    "answer": "C",
-    "explanation": "The future perfect progressive ('will have been + -ing') emphasizes the ongoing duration of an action up to a future point. 'Will have been working for a decade' correctly expresses ongoing duration."
+    "answer": "B",
+    "explanation": "'Laconic' means using very few words; brief and concise. It comes from the Laconians (Spartans), famous for terse speech. Antonyms include verbose, loquacious, garrulous."
   },
   {
     "id": "e05",
-    "level": 4,
-    "category": "reading_comprehension",
-    "question": "Read: 'The phenomenon of semantic satiation \u2014 whereby prolonged repetition of a word causes it to temporarily lose its meaning \u2014 suggests that lexical access is mediated by fatigue-prone neural pathways.' The author implies that:",
+    "level": "expert",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which sentence correctly uses a gerund as the subject?",
     "options": [
-      "A. The brain's word-recognition system can become temporarily overloaded.",
-      "B. Repeating words improves memory.",
-      "C. Semantic satiation is a permanent condition.",
-      "D. Neural pathways are not involved in language processing."
+      "A. To swim in the ocean is my greatest joy.",
+      "B. Swimming in the ocean is my greatest joy.",
+      "C. Swim in the ocean is my greatest joy.",
+      "D. I swim in the ocean is my greatest joy."
     ],
-    "answer": "A",
-    "explanation": "The phrase 'fatigue-prone neural pathways' implies these pathways tire with overuse. When they tire, word recognition fails \u2014 meaning the system becomes temporarily overloaded, not permanently damaged."
+    "answer": "B",
+    "explanation": "A gerund (verb + -ing used as a noun) can function as a subject. 'Swimming' here is the subject. While option A (infinitive as subject) is also grammatically acceptable, a gerund is more natural and idiomatic."
   },
   {
     "id": "e06",
-    "level": 4,
+    "level": "expert",
     "category": "vocabulary",
-    "question": "The word 'tendentious' most accurately means:",
+    "type": "mcq",
+    "question": "What does the word 'sanguine' mean in this context: 'Despite the poor results, he remained sanguine about the company's future.'?",
     "options": [
-      "A. Gentle and relaxed",
-      "B. Extremely precise and careful",
-      "C. Expressing a particular point of view; biased",
-      "D. Prone to sudden outbursts"
+      "A. Pessimistic",
+      "B. Indifferent",
+      "C. Bloodthirsty",
+      "D. Optimistic"
     ],
-    "answer": "C",
-    "explanation": "'Tendentious' describes writing, speech, or arguments that promote a particular cause or point of view, often controversially. A tendentious article is written with bias to support a specific agenda."
+    "answer": "D",
+    "explanation": "'Sanguine' in this context means optimistic, especially in difficult situations. While its Latin root relates to blood (historically linked to a cheerful temperament), in modern English it means positive or hopeful."
   },
   {
     "id": "e07",
-    "level": 4,
-    "category": "sentence_structure",
-    "question": "Which best describes the function of 'not only...but also' in: 'She is not only a talented musician but also a gifted writer.'?",
+    "level": "expert",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "What is the grammatical function of 'whom' in this sentence: 'The candidate whom the committee selected was highly qualified.'?",
     "options": [
-      "A. A subordinating conjunction showing contrast",
-      "B. An adverbial phrase modifying the verb",
-      "C. A coordinating conjunction showing alternatives",
-      "D. A correlative conjunction emphasizing addition"
+      "A. Object of the relative clause",
+      "B. Subject of the relative clause",
+      "C. Possessive pronoun",
+      "D. Indirect object of the main clause"
     ],
-    "answer": "D",
-    "explanation": "'Not only...but also' is a correlative conjunction pair that works together to emphasize that two qualities are both true. It adds emphasis beyond a simple 'and', stressing the accumulation of attributes."
+    "answer": "A",
+    "explanation": "'Whom' is the objective case of 'who'. In the relative clause 'the committee selected [whom]', 'whom' is the direct object of 'selected'. Use 'whom' when the pronoun is the object; use 'who' when it's the subject."
   },
   {
     "id": "e08",
-    "level": 4,
-    "category": "grammar",
-    "question": "In formal English, which sentence correctly avoids a split infinitive while preserving clarity?",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which word means 'using more words than necessary'?",
     "options": [
-      "A. To boldly go where no one has gone before.",
-      "B. Both B and C avoid splitting the infinitive.",
-      "C. Boldly to go where no one has gone before.",
-      "D. To go boldly where no one has gone before."
+      "A. Succinct",
+      "B. Terse",
+      "C. Verbose",
+      "D. Pithy"
     ],
-    "answer": "B",
-    "explanation": "A split infinitive places an adverb between 'to' and the verb (A). Both B ('to go boldly') and C ('boldly to go') avoid this. While split infinitives are acceptable in modern English, both alternatives are formally correct."
+    "answer": "C",
+    "explanation": "'Verbose' means using or expressed in more words than are needed. Synonyms: wordy, long-winded, prolix. Antonyms: succinct, terse, pithy, laconic \u2014 all meaning brief."
   },
   {
     "id": "e09",
-    "level": 4,
-    "category": "reading_comprehension",
-    "question": "Read: 'The author's use of free indirect discourse blurs the boundary between narrator and character, creating a narrative ambiguity that invites readers to question whose values and perceptions are being privileged.' This passage primarily discusses:",
+    "level": "expert",
+    "category": "idioms",
+    "type": "mcq",
+    "question": "What does 'a Pyrrhic victory' mean?",
     "options": [
-      "A. A character's direct speech patterns",
-      "B. A narrative technique that merges perspectives",
-      "C. The author's personal biography",
-      "D. Plot structure in chronological order"
+      "A. A victory achieved through deception",
+      "B. An unexpected or sudden victory",
+      "C. A victory at such great cost that it is essentially a defeat",
+      "D. A victory shared equally between two sides"
     ],
-    "answer": "B",
-    "explanation": "Free indirect discourse is a narrative technique blending narrator and character voices without explicit attribution. The passage describes how this 'blurs boundaries' and creates 'ambiguity' \u2014 it's about narrative technique and perspective."
+    "answer": "C",
+    "explanation": "A 'Pyrrhic victory' is won at so great a cost that it amounts to defeat. It comes from King Pyrrhus of Epirus, who defeated the Romans but suffered devastating losses. Example: 'Winning the lawsuit was a Pyrrhic victory \u2014 the legal fees exceeded the settlement.'"
   },
   {
     "id": "e10",
-    "level": 4,
-    "category": "vocabulary",
-    "question": "Choose the word that most precisely completes: 'The diplomat's ___ response managed to acknowledge the grievance without committing to any course of action.'",
+    "level": "expert",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "Which sentence correctly demonstrates 'cleft' construction for emphasis?",
     "options": [
-      "A. forthright",
-      "B. truculent",
-      "C. perspicacious",
-      "D. noncommittal"
+      "A. John ate the cake.",
+      "B. The cake was eaten by John.",
+      "C. It was John who ate the cake.",
+      "D. Eating the cake was John's action."
+    ],
+    "answer": "C",
+    "explanation": "A cleft sentence splits a simple sentence into two clauses for emphasis using 'It + be + emphasized element + relative clause'. 'It was John who ate the cake' emphasizes that it was specifically John."
+  },
+  {
+    "id": "e11",
+    "level": "expert",
+    "category": "register",
+    "type": "mcq",
+    "question": "Which version of the same idea uses the most academic register?",
+    "options": [
+      "A. Research indicates that adequate sleep confers significant cognitive benefits.",
+      "B. Lots of studies show that sleep is good for you.",
+      "C. Scientists have found out that sleeping well is really important.",
+      "D. You should sleep enough because it helps your brain."
+    ],
+    "answer": "A",
+    "explanation": "Academic register uses formal vocabulary ('indicates', 'confers', 'cognitive'), avoids colloquialisms ('lots of', 'really'), and uses precise language. Option B is the most formal and appropriate for academic writing."
+  },
+  {
+    "id": "e12",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "What is the meaning of 'enervate'?",
+    "options": [
+      "A. To make someone feel drained of energy",
+      "B. To energize or stimulate",
+      "C. To enrage or provoke",
+      "D. To calm or soothe"
+    ],
+    "answer": "A",
+    "explanation": "'Enervate' means to weaken or drain someone of energy. It is often confused with 'energize' (its near-opposite). Example: 'The extreme heat enervated the hikers, forcing them to rest.'"
+  },
+  {
+    "id": "e13",
+    "level": "expert",
+    "category": "grammar",
+    "type": "mcq",
+    "question": "What is the grammatical term for the underlined phrase in this sentence: 'The report, [written by the senior analyst], was well-received.'?",
+    "options": [
+      "A. Participial phrase",
+      "B. Relative clause",
+      "C. Appositive phrase",
+      "D. Adverbial clause"
+    ],
+    "answer": "A",
+    "explanation": "'Written by the senior analyst' is a past participial phrase that modifies the noun 'report'. Participial phrases function as adjectives. A relative clause would use 'which was written by...'."
+  },
+  {
+    "id": "e14",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "mcq",
+    "question": "Which pair of words are antonyms?",
+    "options": [
+      "A. Obsequious / Sycophantic",
+      "B. Loquacious / Garrulous",
+      "C. Pellucid / Opaque",
+      "D. Mendacious / Dishonest"
+    ],
+    "answer": "C",
+    "explanation": "'Pellucid' means transparently clear and easy to understand. 'Opaque' means not transparent \u2014 impossible to see through or understand. They are opposites. The other pairs are synonyms."
+  },
+  {
+    "id": "e15",
+    "level": "expert",
+    "category": "reading comprehension",
+    "type": "mcq",
+    "question": "If someone is described as 'mercurial', this means they are:",
+    "options": [
+      "A. Extremely poisonous and dangerous",
+      "B. Subject to sudden and unpredictable changes of mood",
+      "C. Methodical and slow to act",
+      "D. Related to the planet Mercury"
+    ],
+    "answer": "B",
+    "explanation": "'Mercurial' means subject to sudden, unpredictable changes \u2014 volatile and impulsive. It comes from the Roman god Mercury, known for speed and changeability. Example: 'His mercurial temperament made him difficult to work with.'"
+  },
+  {
+    "id": "e16",
+    "level": "expert",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In formal English, 'due to' should only modify nouns, while 'because of' can modify verbs.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "Traditionally, 'due to' modifies nouns (e.g., 'The delay was due to fog'). 'Because of' modifies verbs (e.g., 'We stopped because of fog'). In practice this distinction is fading, but it is maintained in formal and academic writing."
+  },
+  {
+    "id": "e17",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "true_false",
+    "question": "'Literally' can legitimately be used as an intensifier meaning 'figuratively' in informal speech, and this usage is recorded in major dictionaries.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. While purists object, major dictionaries (Merriam-Webster, Oxford) now include 'literally' as an informal intensifier used for emphasis ('I literally died laughing'). Language evolves through use."
+  },
+  {
+    "id": "e18",
+    "level": "expert",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "The word 'whom' is grammatically required in all formal written English sentences where it would be an object.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. While 'whom' is preferred in formal writing, many style guides acknowledge that 'who' has largely replaced 'whom' in spoken English and informal writing. The distinction is maintained in formal prose but is not universal."
+  },
+  {
+    "id": "e19",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "true_false",
+    "question": "A 'solecism' is a grammatical or linguistic error or impropriety.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. A solecism is a mistake in the use of language, especially grammar (e.g., using 'between you and I' instead of 'between you and me'). The word comes from the ancient Greek city of Soloi, where a corrupt dialect was spoken."
+  },
+  {
+    "id": "e20",
+    "level": "expert",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In English, a dangling modifier always causes a grammatical error that changes the sentence's meaning.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. A dangling modifier is a phrase that doesn't logically attach to the noun it's meant to modify, leading to confusion. E.g., 'Driving down the road, the trees were beautiful' implies the trees were driving."
+  },
+  {
+    "id": "e21",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "true_false",
+    "question": "The words 'affect' and 'effect' can both be used as either a noun or a verb.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True, though the usual roles differ. 'Affect' is usually a verb (to influence) and 'effect' is usually a noun (a result). However, 'effect' can be a verb meaning 'to bring about' (effect change), and 'affect' is a psychological noun for emotion/feeling."
+  },
+  {
+    "id": "e22",
+    "level": "expert",
+    "category": "idioms",
+    "type": "true_false",
+    "question": "The phrase 'begging the question' traditionally means 'raising the question' or 'prompting one to ask'.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": "False. 'Begging the question' is a logical fallacy where an argument's conclusion is assumed in its premise (circular reasoning). 'Raising the question' is a common modern misuse, but the traditional, correct meaning is the logical fallacy."
+  },
+  {
+    "id": "e23",
+    "level": "expert",
+    "category": "grammar",
+    "type": "true_false",
+    "question": "In English, it is possible to have a sentence with no explicit subject.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "A",
+    "explanation": "True. Imperative sentences have an implied subject 'you'. For example, 'Close the door!' has no explicit subject but 'you' is understood. These are grammatically complete sentences."
+  },
+  {
+    "id": "e24",
+    "level": "expert",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "The investigation revealed that the funds ___ misappropriated over a period of several years.",
+    "options": [
+      "A. had been",
+      "B. were being",
+      "C. would have been",
+      "D. were to be"
+    ],
+    "answer": "A",
+    "explanation": "Past perfect passive 'had been misappropriated' is correct here. The misappropriation happened over time before the investigation (a subsequent past event). This requires past perfect to show sequence."
+  },
+  {
+    "id": "e25",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "fill_blank",
+    "question": "The professor's lecture was so ___ that students struggled to extract any clear argument from it.",
+    "options": [
+      "A. pellucid",
+      "B. cogent",
+      "C. abstruse",
+      "D. perspicuous"
+    ],
+    "answer": "C",
+    "explanation": "'Abstruse' means difficult to understand; obscure. 'Pellucid' and 'perspicuous' mean clear and easy to understand. 'Cogent' means convincing. The sentence describes something hard to follow."
+  },
+  {
+    "id": "e26",
+    "level": "expert",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "___ it may seem counterintuitive, the evidence strongly supports this conclusion.",
+    "options": [
+      "A. Although",
+      "B. Despite",
+      "C. However",
+      "D. Whereas"
+    ],
+    "answer": "A",
+    "explanation": "'Although' introduces a subordinate clause with a subject and verb ('it may seem counterintuitive'). 'Despite' takes a noun or gerund, not a full clause. 'However' and 'whereas' don't fit the position here."
+  },
+  {
+    "id": "e27",
+    "level": "expert",
+    "category": "error correction",
+    "type": "fill_blank",
+    "question": "She is one of those people who ___ always ready to help others. (Choose the correct verb form.)",
+    "options": [
+      "A. is",
+      "B. are",
+      "C. was",
+      "D. were"
+    ],
+    "answer": "B",
+    "explanation": "The antecedent of 'who' is 'people' (plural), not 'one'. Therefore, the verb must be plural: 'one of those people who ARE always ready'. This is a common but subtle agreement error."
+  },
+  {
+    "id": "e28",
+    "level": "expert",
+    "category": "vocabulary",
+    "type": "fill_blank",
+    "question": "The author's use of ___ \u2014 attributing human feelings to the storm \u2014 created a powerful emotional effect.",
+    "options": [
+      "A. metaphor",
+      "B. personification",
+      "C. alliteration",
+      "D. hyperbole"
+    ],
+    "answer": "B",
+    "explanation": "Personification is the literary device of attributing human qualities or emotions to non-human things. Attributing feelings to a storm is personification. Metaphor is a comparison; alliteration is repeated sounds; hyperbole is exaggeration."
+  },
+  {
+    "id": "e29",
+    "level": "expert",
+    "category": "register",
+    "type": "fill_blank",
+    "question": "The company's performance has ___ significantly over the last quarter. (formal synonym for 'got better')",
+    "options": [
+      "A. picked up",
+      "B. bounced back",
+      "C. improved",
+      "D. ameliorated"
     ],
     "answer": "D",
-    "explanation": "'Noncommittal' means not expressing a definite opinion or committing to a course of action. A noncommittal response is deliberately vague. 'Forthright' = direct; 'truculent' = aggressive; 'perspicacious' = insightful."
+    "explanation": "'Ameliorated' is the most formal and academic option, meaning to make or become better. 'Improved' is neutral, while 'picked up' and 'bounced back' are informal phrasal verbs."
+  },
+  {
+    "id": "e30",
+    "level": "expert",
+    "category": "grammar",
+    "type": "fill_blank",
+    "question": "The new regulations require that each applicant ___ a certified copy of their documents.",
+    "options": [
+      "A. submits",
+      "B. submitted",
+      "C. submit",
+      "D. would submit"
+    ],
+    "answer": "C",
+    "explanation": "After 'require that', the mandative subjunctive is used \u2014 the base form of the verb without -s. 'Each applicant submit' is correct in formal American English. Some use 'should submit' as an alternative."
+  },
+  {
+    "id": "tr01",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "A. Venus",
+      "B. Jupiter",
+      "C. Saturn",
+      "D. Mars"
+    ],
+    "answer": "D",
+    "explanation": "Mars is called the Red Planet because its surface contains iron oxide (rust), giving it a reddish appearance visible from Earth."
+  },
+  {
+    "id": "tr02",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the capital city of Australia?",
+    "options": [
+      "A. Sydney",
+      "B. Canberra",
+      "C. Brisbane",
+      "D. Melbourne"
+    ],
+    "answer": "B",
+    "explanation": "Canberra is the capital of Australia. Many people assume it's Sydney or Melbourne, but Canberra was purpose-built as a compromise capital between those two rival cities."
+  },
+  {
+    "id": "tr03",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "How many sides does a hexagon have?",
+    "options": [
+      "A. Six",
+      "B. Five",
+      "C. Seven",
+      "D. Eight"
+    ],
+    "answer": "A",
+    "explanation": "A hexagon has six sides. The prefix 'hex-' comes from Greek meaning six. Honeycomb cells are a famous natural example of hexagons."
+  },
+  {
+    "id": "tr04",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which ocean is the largest in the world?",
+    "options": [
+      "A. Atlantic Ocean",
+      "B. Indian Ocean",
+      "C. Arctic Ocean",
+      "D. Pacific Ocean"
+    ],
+    "answer": "D",
+    "explanation": "The Pacific Ocean is the largest and deepest ocean, covering more than 165 million square kilometers \u2014 larger than all of Earth's land combined."
+  },
+  {
+    "id": "tr05",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What gas do plants absorb from the atmosphere during photosynthesis?",
+    "options": [
+      "A. Oxygen",
+      "B. Nitrogen",
+      "C. Carbon dioxide",
+      "D. Hydrogen"
+    ],
+    "answer": "C",
+    "explanation": "Plants absorb carbon dioxide (CO\u2082) from the air and use it along with sunlight and water to produce glucose and oxygen through photosynthesis."
+  },
+  {
+    "id": "tr06",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Who painted the Mona Lisa?",
+    "options": [
+      "A. Michelangelo",
+      "B. Raphael",
+      "C. Leonardo da Vinci",
+      "D. Vincent van Gogh"
+    ],
+    "answer": "C",
+    "explanation": "The Mona Lisa was painted by Leonardo da Vinci, likely between 1503 and 1519. It is now displayed in the Louvre Museum in Paris."
+  },
+  {
+    "id": "tr07",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the fastest land animal?",
+    "options": [
+      "A. Lion",
+      "B. Greyhound",
+      "C. Pronghorn antelope",
+      "D. Cheetah"
+    ],
+    "answer": "D",
+    "explanation": "The cheetah is the fastest land animal, capable of reaching speeds up to 120 km/h (75 mph) in short bursts. It can accelerate from 0 to 100 km/h in about 3 seconds."
+  },
+  {
+    "id": "tr08",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "How many bones are in the adult human body?",
+    "options": [
+      "A. 106",
+      "B. 206",
+      "C. 306",
+      "D. 256"
+    ],
+    "answer": "B",
+    "explanation": "An adult human body has 206 bones. Babies are born with around 270-300 bones, but many fuse together as we grow."
+  },
+  {
+    "id": "tr09",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which country invented pizza?",
+    "options": [
+      "A. Italy",
+      "B. France",
+      "C. Spain",
+      "D. Greece"
+    ],
+    "answer": "A",
+    "explanation": "Pizza originated in Italy, specifically in Naples in the 18th century. The classic Margherita pizza was created there and named after Queen Margherita of Savoy."
+  },
+  {
+    "id": "tr10",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "A. Go",
+      "B. Gd",
+      "C. Au",
+      "D. Gl"
+    ],
+    "answer": "C",
+    "explanation": "Gold's chemical symbol is Au, from the Latin word 'aurum' meaning gold. This is why gold coins and items are sometimes described with 'au' prefixes."
+  },
+  {
+    "id": "tr11",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "In which city would you find the Eiffel Tower?",
+    "options": [
+      "A. Rome",
+      "B. London",
+      "C. Berlin",
+      "D. Paris"
+    ],
+    "answer": "D",
+    "explanation": "The Eiffel Tower is located in Paris, France. It was built by Gustave Eiffel for the 1889 World's Fair and is now one of the most visited monuments in the world."
+  },
+  {
+    "id": "tr12",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What sport is played at Wimbledon?",
+    "options": [
+      "A. Tennis",
+      "B. Cricket",
+      "C. Football",
+      "D. Golf"
+    ],
+    "answer": "A",
+    "explanation": "Wimbledon is one of the four Grand Slam tennis tournaments. Held annually in London, it is the oldest and most prestigious tennis championship in the world, dating back to 1877."
+  },
+  {
+    "id": "tr13",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which planet has the most moons in our solar system?",
+    "options": [
+      "A. Saturn",
+      "B. Jupiter",
+      "C. Uranus",
+      "D. Neptune"
+    ],
+    "answer": "A",
+    "explanation": "As of recent discoveries, Saturn holds the record with over 140 confirmed moons, surpassing Jupiter. Saturn's largest moon, Titan, is bigger than the planet Mercury."
+  },
+  {
+    "id": "tr14",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the longest river in the world?",
+    "options": [
+      "A. Amazon",
+      "B. Yangtze",
+      "C. Nile",
+      "D. Mississippi"
+    ],
+    "answer": "C",
+    "explanation": "The Nile River in Africa is traditionally considered the world's longest river at approximately 6,650 km (4,130 miles), though some measurements put the Amazon close behind."
+  },
+  {
+    "id": "tr15",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which element has the atomic number 1?",
+    "options": [
+      "A. Helium",
+      "B. Hydrogen",
+      "C. Lithium",
+      "D. Carbon"
+    ],
+    "answer": "B",
+    "explanation": "Hydrogen has atomic number 1, meaning it has one proton. It is the lightest and most abundant element in the universe."
+  },
+  {
+    "id": "tr16",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "In what year did the Berlin Wall fall?",
+    "options": [
+      "A. 1985",
+      "B. 1991",
+      "C. 1989",
+      "D. 1993"
+    ],
+    "answer": "C",
+    "explanation": "The Berlin Wall fell on November 9, 1989. This event symbolized the end of the Cold War and led to the reunification of Germany in 1990."
+  },
+  {
+    "id": "tr17",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which country has the largest population in the world?",
+    "options": [
+      "A. USA",
+      "B. China",
+      "C. Indonesia",
+      "D. India"
+    ],
+    "answer": "D",
+    "explanation": "India surpassed China in 2023 to become the world's most populous country, with over 1.4 billion people. India's population is projected to keep growing for decades."
+  },
+  {
+    "id": "tr18",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the hardest natural substance on Earth?",
+    "options": [
+      "A. Quartz",
+      "B. Platinum",
+      "C. Diamond",
+      "D. Titanium"
+    ],
+    "answer": "C",
+    "explanation": "Diamond is the hardest natural substance, rating 10 on the Mohs hardness scale. It is a form of carbon with atoms arranged in a crystal structure called diamond cubic."
+  },
+  {
+    "id": "tr19",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which language is the most widely spoken natively in the world?",
+    "options": [
+      "A. English",
+      "B. Spanish",
+      "C. Mandarin Chinese",
+      "D. Hindi"
+    ],
+    "answer": "C",
+    "explanation": "Mandarin Chinese has the most native speakers (approximately 900 million to 1 billion), though English is more widely spoken as a second language. Spanish is second in native speakers."
+  },
+  {
+    "id": "tr20",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "How many players are there on each side in a standard football (soccer) match?",
+    "options": [
+      "A. 9",
+      "B. 10",
+      "C. 11",
+      "D. 12"
+    ],
+    "answer": "C",
+    "explanation": "Each team in association football (soccer) fields 11 players, including the goalkeeper. The game is played on a rectangular pitch and lasts 90 minutes."
+  },
+  {
+    "id": "tr21",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What do you call a group of lions?",
+    "options": [
+      "A. A pack",
+      "B. A herd",
+      "C. A flock",
+      "D. A pride"
+    ],
+    "answer": "D",
+    "explanation": "A group of lions is called a pride. A pride typically consists of related females, their cubs, and a small number of adult males. They are the only truly social big cat."
+  },
+  {
+    "id": "tr22",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which famous scientist developed the theory of relativity?",
+    "options": [
+      "A. Isaac Newton",
+      "B. Max Planck",
+      "C. Niels Bohr",
+      "D. Albert Einstein"
+    ],
+    "answer": "D",
+    "explanation": "Albert Einstein developed the special theory of relativity (1905) and general theory of relativity (1915). His famous equation E=mc\u00b2 describes the equivalence of energy and mass."
+  },
+  {
+    "id": "tr23",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the main ingredient in traditional Japanese sushi rice?",
+    "options": [
+      "A. Mirin",
+      "B. Soy sauce",
+      "C. Sake",
+      "D. Vinegar"
+    ],
+    "answer": "D",
+    "explanation": "Sushi rice (shari) is seasoned with rice vinegar (along with salt and sugar). The vinegar gives it its distinctive flavor and sticky texture, helping it hold its shape."
+  },
+  {
+    "id": "tr24",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "How many continents are there on Earth?",
+    "options": [
+      "A. Five",
+      "B. Six",
+      "C. Eight",
+      "D. Seven"
+    ],
+    "answer": "D",
+    "explanation": "Earth has seven continents: Africa, Antarctica, Asia, Australia (Oceania), Europe, North America, and South America. Some models group Europe and Asia as Eurasia (6 continents)."
+  },
+  {
+    "id": "tr25",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which invention by Johannes Gutenberg in the 1440s revolutionized the spread of knowledge?",
+    "options": [
+      "A. The compass",
+      "B. The printing press",
+      "C. The telescope",
+      "D. The mechanical clock"
+    ],
+    "answer": "B",
+    "explanation": "Gutenberg's movable-type printing press (~1440) made book production fast and affordable, enabling the mass spread of literacy, science, and ideas \u2014 fueling the Renaissance and Reformation."
+  },
+  {
+    "id": "tr26",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "A. Liver",
+      "B. Skin",
+      "C. Brain",
+      "D. Lungs"
+    ],
+    "answer": "B",
+    "explanation": "The skin is the largest organ of the human body by surface area and weight. In adults, it covers about 2 square meters and accounts for roughly 15% of body weight."
+  },
+  {
+    "id": "tr27",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "In which country would you find the ancient ruins of Machu Picchu?",
+    "options": [
+      "A. Mexico",
+      "B. Colombia",
+      "C. Bolivia",
+      "D. Peru"
+    ],
+    "answer": "D",
+    "explanation": "Machu Picchu is an ancient Inca citadel located in the Andes Mountains of Peru. Built around 1450 AD, it was designated a UNESCO World Heritage Site in 1983."
+  },
+  {
+    "id": "tr28",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "How many strings does a standard guitar have?",
+    "options": [
+      "A. Four",
+      "B. Six",
+      "C. Five",
+      "D. Eight"
+    ],
+    "answer": "B",
+    "explanation": "A standard guitar has six strings, typically tuned E-A-D-G-B-E (from thickest to thinnest). Bass guitars have four strings, while some specialty guitars have more."
+  },
+  {
+    "id": "tr29",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the name of the largest bone in the human body?",
+    "options": [
+      "A. Humerus",
+      "B. Fibula",
+      "C. Tibia",
+      "D. Femur"
+    ],
+    "answer": "D",
+    "explanation": "The femur (thigh bone) is the longest and strongest bone in the human body. It connects the hip to the knee and can support up to 30 times the weight of an adult."
+  },
+  {
+    "id": "tr30",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": [
+      "A. China",
+      "B. South Korea",
+      "C. Japan",
+      "D. Thailand"
+    ],
+    "answer": "C",
+    "explanation": "Japan is called the Land of the Rising Sun. The name 'Japan' in Japanese is 'Nihon' or 'Nippon', meaning 'sun origin', because Japan is located to the east \u2014 the direction of the rising sun."
+  },
+  {
+    "id": "tr31",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What does DNA stand for?",
+    "options": [
+      "A. Deoxyribonucleic Acid",
+      "B. Digital Nucleic Acid",
+      "C. Dynamic Neutron Array",
+      "D. Dual Nitrogen Atom"
+    ],
+    "answer": "A",
+    "explanation": "DNA stands for Deoxyribonucleic Acid. It is the molecule that carries genetic information in all living organisms and many viruses. Its double-helix structure was discovered by Watson and Crick in 1953."
+  },
+  {
+    "id": "tr32",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which is the smallest country in the world by area?",
+    "options": [
+      "A. Monaco",
+      "B. San Marino",
+      "C. Vatican City",
+      "D. Liechtenstein"
+    ],
+    "answer": "C",
+    "explanation": "Vatican City, with an area of just 0.44 square kilometers, is the smallest country in the world. It is an independent city-state within Rome and the headquarters of the Catholic Church."
+  },
+  {
+    "id": "tr33",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the boiling point of water at sea level in Celsius?",
+    "options": [
+      "A. 90\u00b0C",
+      "B. 95\u00b0C",
+      "C. 100\u00b0C",
+      "D. 110\u00b0C"
+    ],
+    "answer": "C",
+    "explanation": "Water boils at 100\u00b0C (212\u00b0F) at standard atmospheric pressure (sea level). At higher altitudes, where air pressure is lower, water boils at a lower temperature."
+  },
+  {
+    "id": "tr34",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which animal is the tallest in the world?",
+    "options": [
+      "A. Elephant",
+      "B. Horse",
+      "C. Camel",
+      "D. Giraffe"
+    ],
+    "answer": "D",
+    "explanation": "The giraffe is the tallest living terrestrial animal, with males reaching up to 5.5\u20136 meters (18\u201320 feet) in height. Their long necks allow them to reach leaves high in trees."
+  },
+  {
+    "id": "tr35",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "In what year did the first moon landing take place?",
+    "options": [
+      "A. 1965",
+      "B. 1967",
+      "C. 1969",
+      "D. 1971"
+    ],
+    "answer": "C",
+    "explanation": "Apollo 11 landed on the Moon on July 20, 1969. Neil Armstrong became the first human to walk on the Moon, followed by Buzz Aldrin. Michael Collins orbited above."
+  },
+  {
+    "id": "tr36",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What type of animal is a Komodo dragon?",
+    "options": [
+      "A. A mammal",
+      "B. A lizard",
+      "C. An amphibian",
+      "D. A crocodilian"
+    ],
+    "answer": "B",
+    "explanation": "The Komodo dragon is the world's largest living lizard. Found mainly on Indonesian islands, it can grow up to 3 meters long and weigh up to 70 kg. It is a reptile."
+  },
+  {
+    "id": "tr37",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Which famous ancient wonder of the world still exists today?",
+    "options": [
+      "A. The Hanging Gardens of Babylon",
+      "B. The Great Pyramid of Giza",
+      "C. The Colossus of Rhodes",
+      "D. The Lighthouse of Alexandria"
+    ],
+    "answer": "B",
+    "explanation": "The Great Pyramid of Giza is the only one of the Seven Wonders of the Ancient World still largely intact. Built around 2560 BC, it served as the tomb of Pharaoh Khufu."
+  },
+  {
+    "id": "tr38",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the national currency of Japan?",
+    "options": [
+      "A. Won",
+      "B. Yuan",
+      "C. Ringgit",
+      "D. Yen"
+    ],
+    "answer": "D",
+    "explanation": "Japan's currency is the yen (\u00a5). The word 'yen' means 'round object' in Japanese. The South Korean currency is the won, China's is the yuan, and Malaysia's is the ringgit."
+  },
+  {
+    "id": "tr39",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "Who wrote the novel 'Pride and Prejudice'?",
+    "options": [
+      "A. Charlotte Bront\u00eb",
+      "B. Jane Austen",
+      "C. Emily Bront\u00eb",
+      "D. Mary Shelley"
+    ],
+    "answer": "B",
+    "explanation": "'Pride and Prejudice' was written by Jane Austen, published in 1813. It follows Elizabeth Bennet and Mr. Darcy and is one of the most beloved novels in the English language."
+  },
+  {
+    "id": "tr40",
+    "level": "any",
+    "category": "trivia",
+    "type": "trivia",
+    "question": "What is the speed of light in a vacuum, approximately?",
+    "options": [
+      "A. 300 km per second",
+      "B. 30,000 km per second",
+      "C. 3,000,000 km per second",
+      "D. 300,000 km per second"
+    ],
+    "answer": "D",
+    "explanation": "The speed of light in a vacuum is approximately 299,792 km/s \u2014 commonly rounded to 300,000 km/s. It is represented by the symbol 'c' and is the universal speed limit according to Einstein's relativity."
   }
 ]
