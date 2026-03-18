@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESL Quest — English Learning Game</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<!-- Toast notifications -->
+<div id="toast-container" class="toast-container"></div>
+
+<!-- Confetti layer (victory) -->
+<div id="confetti-wrap" class="confetti-wrap"></div>
+
+<!-- ─── HUD ─────────────────────────────────── -->
+<div id="hud">
+  <div class="hud-inner">
+    <div class="hud-item" id="hud-lives">
+      <span class="label">Lives</span>
+      <span class="hud-val">❤️❤️❤️❤️❤️</span>
+    </div>
+    <div class="hud-item" id="hud-points">
+      <span class="label">💰</span>
+      <span class="hud-val">0</span>
+    </div>
+    <div class="hud-item" id="hud-level">
+      <span class="label">Level</span>
+      <span class="hud-val">Beginner</span>
+    </div>
+    <div class="hud-item hud-progress" style="flex:1">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="label">Progress</span>
+        <span id="hud-progress-text" style="font-size:0.8rem;color:var(--text-secondary)">0/10</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="hud-progress-bar" style="width:0%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── App Container ─────────────────────── -->
+<div id="app">
+
+  <!-- ══════════════════════════════════════════
+       SCREEN 1 — MAIN MENU
+  ══════════════════════════════════════════ -->
+  <div id="main-menu" class="screen active">
+    <div class="logo-section">
+      <h1 class="logo-title">ESL Quest</h1>
+      <p class="logo-subtitle">Master English. Level up. Beat the boss.</p>
+    </div>
+
+    <div class="high-score-display">
+      🏆 High Score: <span id="menu-high-score">0</span> pts
+    </div>
+
+    <div class="menu-buttons">
+      <button id="btn-new-game" class="btn btn-primary btn-large btn-full">
+        🎮 New Game
+      </button>
+      <button id="btn-continue" class="btn btn-secondary btn-large btn-full">
+        ▶ Continue
+      </button>
+      <button id="btn-how-to-play" class="btn btn-outline btn-full">
+        ❓ How to Play
+      </button>
+    </div>
+
+    <div class="level-preview card" style="max-width:600px;margin-top:8px">
+      <h3 style="margin-bottom:12px;color:var(--text-secondary);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em">Game Levels</h3>
+      <div class="level-grid">
+        <div class="level-card">
+          <div class="level-num">1️⃣</div>
+          <div class="level-name">Beginner</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px">60 pts to advance</div>
+        </div>
+        <div class="level-card">
+          <div class="level-num">2️⃣</div>
+          <div class="level-name">Intermediate</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px">150 pts to advance</div>
+        </div>
+        <div class="level-card">
+          <div class="level-num">3️⃣</div>
+          <div class="level-name">Advanced</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px">280 pts to advance</div>
+        </div>
+        <div class="level-card">
+          <div class="level-num">4️⃣</div>
+          <div class="level-name">Expert</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px">450 pts to advance</div>
+        </div>
+        <div class="level-card" style="border-color:rgba(239,68,68,0.3)">
+          <div class="level-num">⚔️</div>
+          <div class="level-name" style="color:var(--accent-red)">Boss Fight</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px">Reach 600 pts!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCREEN 2 — QUESTION SCREEN
+  ══════════════════════════════════════════ -->
+  <div id="question-screen" class="screen">
+    <div class="question-screen-inner container">
+
+      <!-- Header row -->
+      <div class="question-header">
+        <div class="question-meta">
+          <span class="badge badge-category" id="q-category">Vocabulary</span>
+          <span class="badge badge-level" id="q-level-badge">Beginner</span>
+        </div>
+        <div class="question-counter" id="q-counter">0 / 10</div>
+      </div>
+
+      <!-- Question card -->
+      <div class="card question-card">
+        <p class="question-text" id="q-text">Loading question...</p>
+        <div class="options-grid" id="options-grid">
+          <!-- Options injected by JS -->
+        </div>
+      </div>
+
+      <!-- Feedback area -->
+      <div class="feedback-area" id="feedback-area"></div>
+
+      <!-- Navigation buttons -->
+      <div class="next-btn-wrap">
+        <button id="next-question-btn" class="btn btn-primary" style="display:none">
+          Next Question →
+        </button>
+        <button id="finish-round-btn" class="btn btn-primary" style="display:none">
+          Finish Round 🎰
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCREEN 3 — MINIGAME SELECT
+  ══════════════════════════════════════════ -->
+  <div id="minigame-select" class="screen">
+    <div class="container">
+      <div class="minigame-header">
+        <h2>🎰 Choose Your Minigame</h2>
+        <p style="color:var(--text-secondary)">Bet your points to multiply them — or skip and move on.</p>
+      </div>
+
+      <div class="minigame-grid">
+
+        <div class="minigame-card" data-game="blackjack">
+          <div class="minigame-emoji">🃏</div>
+          <div class="minigame-name">Blackjack</div>
+          <div class="minigame-desc">Beat the dealer! Get as close to 21 as you can without going over.</div>
+        </div>
+
+        <div class="minigame-card" data-game="roulette">
+          <div class="minigame-emoji">🎡</div>
+          <div class="minigame-name">Roulette</div>
+          <div class="minigame-desc">Spin the wheel! Bet on red/black or pick a lucky number for 35× payout.</div>
+        </div>
+
+        <div class="minigame-card" data-game="dice">
+          <div class="minigame-emoji">🎲</div>
+          <div class="minigame-name">Dice Duel</div>
+          <div class="minigame-desc">Roll 2 dice against the dealer. Higher total wins. Go double-or-nothing!</div>
+        </div>
+
+        <div class="minigame-card" data-game="highlow">
+          <div class="minigame-emoji">⬆️⬇️</div>
+          <div class="minigame-name">High / Low</div>
+          <div class="minigame-desc">Guess if the next card is higher or lower. Build a streak for bigger multipliers!</div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:24px">
+        <button class="btn btn-secondary" onclick="leaveMiniGame()">
+          Skip → Next Level
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCREEN 4 — MINIGAME PLAY
+  ══════════════════════════════════════════ -->
+  <div id="minigame-play" class="screen">
+    <div class="minigame-play-inner container">
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="btn btn-secondary" id="mg-back-btn" style="padding:8px 14px;font-size:0.85rem">← Back</button>
+        <div>
+          <h2 id="mg-title">Minigame</h2>
+          <p id="mg-desc" style="color:var(--text-secondary);font-size:0.9rem;margin-top:2px"></p>
+        </div>
+      </div>
+
+      <!-- Game area — injected by JS -->
+      <div class="card game-area" id="game-area" style="min-height:250px">
+        <!-- Dynamic content -->
+      </div>
+
+      <!-- Result message -->
+      <div class="result-message" id="mg-result"></div>
+
+      <!-- Persistent points display -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-secondary);border-radius:var(--radius-md);border:1px solid var(--border-color)">
+        <span style="color:var(--text-secondary);font-size:0.9rem">Your Points</span>
+        <span id="mg-points-display" style="font-size:1.2rem;font-weight:800;color:var(--accent-yellow)">—</span>
+      </div>
+
+      <button id="mg-continue-btn" class="btn btn-primary btn-full">
+        Continue to Next Level →
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCREEN 5 — BOSS SCREEN
+  ══════════════════════════════════════════ -->
+  <div id="boss-screen" class="screen">
+    <div class="boss-screen-inner container">
+
+      <div class="boss-header">
+        <h1 class="boss-title">⚔️ BOSS FIGHT</h1>
+        <p style="color:var(--text-secondary);margin-top:6px">Answer fast. Every wrong answer costs 2 lives. Reach 600 pts to win!</p>
+      </div>
+
+      <!-- Goal indicator -->
+      <div class="boss-goal">
+        <span style="color:var(--text-secondary)">Points Progress</span>
+        <span class="goal-progress" id="boss-goal-progress">0 / 600 pts</span>
+      </div>
+
+      <!-- Timer -->
+      <div class="boss-timer-wrap card" style="padding:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="color:var(--text-secondary);font-size:0.85rem">⏱ Time Remaining</span>
+          <span class="timer-display" id="boss-timer-display">10</span>
+        </div>
+        <div class="timer-bar-wrap">
+          <div class="timer-bar" id="boss-timer-bar" style="width:100%"></div>
+        </div>
+      </div>
+
+      <div class="boss-penalty-note">
+        ⚠️ Wrong answer = <strong>−2 lives</strong> &nbsp;|&nbsp; Time out = −2 lives
+      </div>
+
+      <!-- Question card -->
+      <div class="card question-card">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+          <span class="badge badge-category" id="boss-q-category">Category</span>
+          <span class="badge" style="background:rgba(239,68,68,0.15);color:var(--accent-red);border:1px solid rgba(239,68,68,0.3)">Boss Level</span>
+        </div>
+        <p class="question-text" id="boss-q-text">Loading boss question...</p>
+        <div class="options-grid" id="boss-options-grid">
+          <!-- Options injected by JS -->
+        </div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="feedback-area" id="boss-feedback"></div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCREEN 6 — GAME OVER
+  ══════════════════════════════════════════ -->
+  <div id="gameover-screen" class="screen">
+    <div class="gameover-inner">
+      <div class="gameover-emoji">💀</div>
+      <h1 class="gameover-title">Game Over</h1>
+      <p style="color:var(--text-secondary)">You fought well. But the quest demands more...</p>
+
+      <div class="score-display card">
+        <div class="score-label">Final Score</div>
+        <div class="final-score" id="gameover-score">0</div>
+        <div class="score-label" style="margin-top:4px">points</div>
+        <div class="high-score-label" id="gameover-hs">Best: 0 pts</div>
+      </div>
+
+      <div class="menu-buttons" style="gap:12px">
+        <button id="gameover-restart-btn" class="btn btn-primary btn-large btn-full">
+          🔄 Try Again
+        </button>
+        <button id="gameover-menu-btn" class="btn btn-secondary btn-full">
+          🏠 Main Menu
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCREEN 7 — VICTORY
+  ══════════════════════════════════════════ -->
+  <div id="victory-screen" class="screen">
+    <div class="victory-inner">
+      <div class="victory-emoji">🏆</div>
+      <h1 class="victory-title">Victory!</h1>
+      <p style="color:var(--text-secondary)">You defeated the boss and mastered English!</p>
+
+      <div class="score-display card" style="border-color:var(--border-accent);box-shadow:var(--shadow-glow)">
+        <div class="score-label">Final Score</div>
+        <div class="final-score" style="color:var(--accent-green)" id="victory-score">0</div>
+        <div class="score-label" style="margin-top:4px">points</div>
+        <div class="high-score-label" id="victory-hs">Best: 0 pts</div>
+      </div>
+
+      <div class="menu-buttons" style="gap:12px">
+        <button id="victory-restart-btn" class="btn btn-primary btn-large btn-full">
+          🔄 Play Again
+        </button>
+        <button id="victory-menu-btn" class="btn btn-secondary btn-full">
+          🏠 Main Menu
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /#app -->
+
+<script src="/static/app.js"></script>
+</body>
+</html>

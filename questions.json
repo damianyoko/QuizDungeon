@@ -1,0 +1,364 @@
+{
+  "questions": [
+    {
+      "id": "b01",
+      "level": 1,
+      "category": "vocabulary",
+      "question": "What does the word 'happy' mean?",
+      "options": ["A. Sad", "B. Angry", "C. Feeling pleasure or joy", "D. Tired"],
+      "answer": "C",
+      "explanation": "'Happy' means feeling pleasure or joy. For example: 'She was happy to see her friend.'"
+    },
+    {
+      "id": "b02",
+      "level": 1,
+      "category": "grammar",
+      "question": "Choose the correct sentence:",
+      "options": ["A. She go to school every day.", "B. She goes to school every day.", "C. She going to school every day.", "D. She gone to school every day."],
+      "answer": "B",
+      "explanation": "With third-person singular subjects (she/he/it), we add -s or -es to the verb in the present simple tense. 'She goes' is correct."
+    },
+    {
+      "id": "b03",
+      "level": 1,
+      "category": "vocabulary",
+      "question": "Which word is the opposite of 'big'?",
+      "options": ["A. Large", "B. Huge", "C. Small", "D. Tall"],
+      "answer": "C",
+      "explanation": "'Small' is the opposite (antonym) of 'big'. 'Large' and 'huge' are synonyms of 'big'."
+    },
+    {
+      "id": "b04",
+      "level": 1,
+      "category": "grammar",
+      "question": "Fill in the blank: 'There ___ two cats in the garden.'",
+      "options": ["A. is", "B. are", "C. am", "D. be"],
+      "answer": "B",
+      "explanation": "Use 'are' with plural nouns. 'Two cats' is plural, so we say 'There are two cats.'"
+    },
+    {
+      "id": "b05",
+      "level": 1,
+      "category": "sentence_structure",
+      "question": "Which is a complete sentence?",
+      "options": ["A. Running in the park.", "B. The dog barks loudly.", "C. Because it was cold.", "D. A big red apple."],
+      "answer": "B",
+      "explanation": "'The dog barks loudly' has a subject (the dog) and a verb (barks). The other options are incomplete sentences (fragments)."
+    },
+    {
+      "id": "b06",
+      "level": 1,
+      "category": "vocabulary",
+      "question": "What does 'delicious' mean?",
+      "options": ["A. Ugly", "B. Very tasty", "C. Very loud", "D. Very cold"],
+      "answer": "B",
+      "explanation": "'Delicious' means having a very pleasant taste or smell. 'This pizza is delicious!'"
+    },
+    {
+      "id": "b07",
+      "level": 1,
+      "category": "grammar",
+      "question": "Which sentence uses 'a' or 'an' correctly?",
+      "options": ["A. She ate a apple.", "B. He saw an dog.", "C. I have an umbrella.", "D. They found a hour ago."],
+      "answer": "C",
+      "explanation": "Use 'an' before words starting with a vowel sound. 'Umbrella' starts with a vowel sound, so 'an umbrella' is correct."
+    },
+    {
+      "id": "b08",
+      "level": 1,
+      "category": "sentence_structure",
+      "question": "Put the words in the correct order: 'the / reads / boy / book / a'",
+      "options": ["A. A boy the reads book.", "B. The boy reads a book.", "C. Reads the boy a book.", "D. Book a the boy reads."],
+      "answer": "B",
+      "explanation": "Basic English sentence order is Subject + Verb + Object. 'The boy' (subject) + 'reads' (verb) + 'a book' (object)."
+    },
+    {
+      "id": "b09",
+      "level": 1,
+      "category": "reading_comprehension",
+      "question": "Read: 'Maria wakes up at 7 AM. She eats breakfast and then walks to school.' What does Maria do AFTER eating breakfast?",
+      "options": ["A. She sleeps.", "B. She walks to school.", "C. She watches TV.", "D. She calls her friends."],
+      "answer": "B",
+      "explanation": "The text says 'She eats breakfast and then walks to school.' The word 'then' shows the sequence — walking to school comes after breakfast."
+    },
+    {
+      "id": "b10",
+      "level": 1,
+      "category": "vocabulary",
+      "question": "Which word means 'to move quickly on foot'?",
+      "options": ["A. Sleep", "B. Run", "C. Sit", "D. Think"],
+      "answer": "B",
+      "explanation": "'Run' means to move quickly on foot. 'She can run very fast.'"
+    },
+    {
+      "id": "i01",
+      "level": 2,
+      "category": "grammar",
+      "question": "Which sentence is in the past perfect tense?",
+      "options": ["A. She was eating dinner.", "B. She has eaten dinner.", "C. She had eaten dinner before he arrived.", "D. She will have eaten dinner."],
+      "answer": "C",
+      "explanation": "The past perfect uses 'had + past participle'. 'She had eaten' is past perfect, showing an action completed before another past event."
+    },
+    {
+      "id": "i02",
+      "level": 2,
+      "category": "vocabulary",
+      "question": "What does 'ambiguous' mean?",
+      "options": ["A. Perfectly clear", "B. Open to more than one interpretation", "C. Extremely difficult", "D. Related to water"],
+      "answer": "B",
+      "explanation": "'Ambiguous' means having more than one possible meaning or interpretation. 'His ambiguous statement confused everyone.'"
+    },
+    {
+      "id": "i03",
+      "level": 2,
+      "category": "sentence_structure",
+      "question": "Identify the dependent clause in: 'Although it was raining, we went for a walk.'",
+      "options": ["A. we went for a walk", "B. Although it was raining", "C. it was raining, we went", "D. went for a walk"],
+      "answer": "B",
+      "explanation": "'Although it was raining' is the dependent (subordinate) clause — it cannot stand alone and depends on the main clause 'we went for a walk.'"
+    },
+    {
+      "id": "i04",
+      "level": 2,
+      "category": "grammar",
+      "question": "Choose the correct form: 'If I ___ rich, I would travel the world.'",
+      "options": ["A. am", "B. was", "C. were", "D. will be"],
+      "answer": "C",
+      "explanation": "In second conditional sentences (hypothetical situations), we use 'were' for all subjects. 'If I were rich' is the grammatically correct form."
+    },
+    {
+      "id": "i05",
+      "level": 2,
+      "category": "reading_comprehension",
+      "question": "Read: 'The new restaurant on Fifth Avenue has received mixed reviews. While critics praised the innovative menu, many customers complained about the slow service and high prices.' What is the main idea?",
+      "options": ["A. The restaurant is very popular.", "B. Critics love all restaurants.", "C. The restaurant has both positive and negative feedback.", "D. The restaurant will close soon."],
+      "answer": "C",
+      "explanation": "'Mixed reviews' and the contrast between praise and complaints show that opinions about the restaurant are divided — both positive and negative."
+    },
+    {
+      "id": "i06",
+      "level": 2,
+      "category": "vocabulary",
+      "question": "The word 'benevolent' most closely means:",
+      "options": ["A. Cruel and harsh", "B. Kind and charitable", "C. Lazy and slow", "D. Loud and annoying"],
+      "answer": "B",
+      "explanation": "'Benevolent' comes from Latin meaning 'well-wishing'. It describes someone who is kind, generous, and charitable toward others."
+    },
+    {
+      "id": "i07",
+      "level": 2,
+      "category": "grammar",
+      "question": "Which sentence correctly uses the present perfect?",
+      "options": ["A. I have saw that movie last week.", "B. She has finished her homework.", "C. They have went to Paris yesterday.", "D. He has drove to work this morning."],
+      "answer": "B",
+      "explanation": "The present perfect is formed with 'have/has + past participle'. 'Finished' is the correct past participle. The others use wrong forms (saw, went, drove instead of seen, gone, driven)."
+    },
+    {
+      "id": "i08",
+      "level": 2,
+      "category": "sentence_structure",
+      "question": "Which sentence uses a relative clause correctly?",
+      "options": ["A. The book who I read was excellent.", "B. The man which lives next door is friendly.", "C. The woman whose car was stolen called the police.", "D. The dog that it barked all night kept me awake."],
+      "answer": "C",
+      "explanation": "'Whose' is used for possession in relative clauses. 'The woman whose car' is correct. 'Who/that' are for people/things (not 'which' for people, and no extra pronoun like 'it')."
+    },
+    {
+      "id": "i09",
+      "level": 2,
+      "category": "vocabulary",
+      "question": "Choose the word that best completes the sentence: 'The scientist made a ___ discovery that changed our understanding of physics.'",
+      "options": ["A. groundbreaking", "B. underground", "C. breakground", "D. grounded"],
+      "answer": "A",
+      "explanation": "'Groundbreaking' means innovative, pioneering, or revolutionary. It's a compound adjective meaning the discovery was so significant it 'broke new ground.'"
+    },
+    {
+      "id": "i10",
+      "level": 2,
+      "category": "reading_comprehension",
+      "question": "Read: 'Despite investing heavily in advertising, the company saw a 15% decline in sales. Analysts attributed this to a poorly designed product rather than a lack of awareness.' What can be inferred?",
+      "options": ["A. The advertising campaign was too expensive.", "B. People knew about the product but didn't want to buy it.", "C. The company should advertise more.", "D. Analysts were wrong about the product."],
+      "answer": "B",
+      "explanation": "Heavy advertising created awareness, yet sales declined. The 'poorly designed product' was the issue — meaning people knew about it but found it unsatisfactory."
+    },
+    {
+      "id": "a01",
+      "level": 3,
+      "category": "grammar",
+      "question": "Which sentence demonstrates correct use of the subjunctive mood?",
+      "options": ["A. The doctor recommended that he takes more rest.", "B. The doctor recommended that he take more rest.", "C. The doctor recommended that he is taking more rest.", "D. The doctor recommended that he took more rest."],
+      "answer": "B",
+      "explanation": "The subjunctive mood uses the base form of the verb (without -s/-es) after expressions like 'recommend that', 'suggest that', 'insist that'. 'That he take' is correct subjunctive."
+    },
+    {
+      "id": "a02",
+      "level": 3,
+      "category": "vocabulary",
+      "question": "The word 'sycophantic' describes someone who is:",
+      "options": ["A. Extremely talented and gifted", "B. Excessively flattering to gain favor", "C. Deeply philosophical and thoughtful", "D. Openly hostile and aggressive"],
+      "answer": "B",
+      "explanation": "'Sycophantic' describes someone who uses excessive flattery or insincere praise to gain advantage. A sycophant is often called a 'yes-man' or flatterer."
+    },
+    {
+      "id": "a03",
+      "level": 3,
+      "category": "sentence_structure",
+      "question": "Identify the rhetorical device: 'The silence was deafening.'",
+      "options": ["A. Alliteration", "B. Oxymoron", "C. Hyperbole", "D. Simile"],
+      "answer": "B",
+      "explanation": "An oxymoron combines contradictory terms for effect. 'Silence' (absence of sound) and 'deafening' (extremely loud) are contradictory, creating emphasis on the profundity of the silence."
+    },
+    {
+      "id": "a04",
+      "level": 3,
+      "category": "grammar",
+      "question": "Choose the correct sentence with a dangling modifier:",
+      "options": ["A. Walking to the store, the rain began to fall. (This is incorrect — identify it)", "B. Walking to the store, she noticed the rain.", "C. Having finished the report, it was submitted.", "D. Both A and C contain dangling modifiers."],
+      "answer": "D",
+      "explanation": "A dangling modifier lacks a clear subject. In A, 'walking' implies the rain was walking. In C, 'having finished' implies 'it' finished the report. Both are incorrect. B is correct because 'she' is walking."
+    },
+    {
+      "id": "a05",
+      "level": 3,
+      "category": "reading_comprehension",
+      "question": "Read: 'The Luddites, often mischaracterized as simply anti-technology, were in fact skilled craftsmen who opposed specific machinery introduced during the Industrial Revolution that threatened their livelihoods and craft traditions.' What is the author's purpose?",
+      "options": ["A. To argue that technology is harmful.", "B. To correct a common misconception about the Luddites.", "C. To celebrate the Industrial Revolution.", "D. To explain how machines work."],
+      "answer": "B",
+      "explanation": "The phrase 'often mischaracterized' signals the author is correcting a misconception. The author clarifies the Luddites had specific economic grievances, not blanket anti-technology views."
+    },
+    {
+      "id": "a06",
+      "level": 3,
+      "category": "vocabulary",
+      "question": "Which word is most similar in meaning to 'ephemeral'?",
+      "options": ["A. Permanent", "B. Transient", "C. Substantial", "D. Elaborate"],
+      "answer": "B",
+      "explanation": "'Ephemeral' means lasting for a very short time. 'Transient' shares this meaning — both describe something fleeting or short-lived. 'Permanent' is an antonym."
+    },
+    {
+      "id": "a07",
+      "level": 3,
+      "category": "sentence_structure",
+      "question": "Which sentence uses parallel structure correctly?",
+      "options": ["A. She likes hiking, to swim, and to run cycling.", "B. She likes hiking, swimming, and cycling.", "C. She likes to hike, swimming, and cycling.", "D. She likes hike, swim, and cycling."],
+      "answer": "B",
+      "explanation": "Parallel structure requires the same grammatical form for items in a series. 'Hiking, swimming, and cycling' all use the gerund (-ing) form, making the sentence grammatically balanced."
+    },
+    {
+      "id": "a08",
+      "level": 3,
+      "category": "grammar",
+      "question": "Select the sentence with correct punctuation for a non-restrictive clause:",
+      "options": ["A. My brother who lives in London called me yesterday.", "B. My brother, who lives in London, called me yesterday.", "C. My brother; who lives in London, called me yesterday.", "D. My brother — who lives in London called me yesterday."],
+      "answer": "B",
+      "explanation": "Non-restrictive (non-essential) clauses must be set off with commas. Since the speaker has only one brother, 'who lives in London' is non-restrictive additional information requiring commas."
+    },
+    {
+      "id": "a09",
+      "level": 3,
+      "category": "reading_comprehension",
+      "question": "Read: 'While proponents argue that social media fosters global connectivity, critics contend that it amplifies tribalism, creates echo chambers, and diminishes the quality of civic discourse.' The word 'contend' most nearly means:",
+      "options": ["A. Agree strongly", "B. Assert or argue", "C. Doubt or question", "D. Ignore or dismiss"],
+      "answer": "B",
+      "explanation": "'Contend' means to assert something as a position in an argument or debate. Critics are making a counter-argument — they are asserting or arguing their position."
+    },
+    {
+      "id": "a10",
+      "level": 3,
+      "category": "vocabulary",
+      "question": "The prefix 'mal-' in words like 'malfunction', 'malevolent', and 'malnutrition' means:",
+      "options": ["A. Good or well", "B. Bad, wrong, or ill", "C. Half or partial", "D. After or behind"],
+      "answer": "B",
+      "explanation": "The Latin prefix 'mal-' means bad, wrong, or ill. Malfunction = working badly; malevolent = wishing ill; malnutrition = poor nutrition. Recognizing prefixes helps decode unfamiliar words."
+    },
+    {
+      "id": "e01",
+      "level": 4,
+      "category": "grammar",
+      "question": "Which sentence correctly uses the passive causative?",
+      "options": ["A. She cut her hair yesterday.", "B. She had her hair cut yesterday.", "C. She was cutting her hair yesterday.", "D. Her hair was cut by herself."],
+      "answer": "B",
+      "explanation": "The passive causative ('have/get + object + past participle') indicates someone arranged for another to perform an action. 'She had her hair cut' means a hairdresser cut it for her."
+    },
+    {
+      "id": "e02",
+      "level": 4,
+      "category": "vocabulary",
+      "question": "Which word best describes someone who 'takes perverse pleasure in others' misfortune'?",
+      "options": ["A. Empathetic", "B. Schadenfreude (as an adjective: schadenfroh)", "C. Sardonic", "D. Misanthropic"],
+      "answer": "C",
+      "explanation": "While 'schadenfreude' (German loanword) is the noun, 'sardonic' describes a cynical, mocking humor often at others' expense. However, technically the closest concept is misanthropic disdain. 'Sardonic' = grimly mocking. The question tests nuanced vocabulary."
+    },
+    {
+      "id": "e03",
+      "level": 4,
+      "category": "sentence_structure",
+      "question": "Identify the type of sentence: 'Had I known about the traffic, I would have left earlier.'",
+      "options": ["A. Second conditional", "B. Third conditional inverted", "C. Mixed conditional", "D. Zero conditional"],
+      "answer": "B",
+      "explanation": "This is an inverted third conditional. The 'if' clause is replaced by inversion: 'Had I known' = 'If I had known'. Inversion is a formal alternative to the standard 'if' construction."
+    },
+    {
+      "id": "e04",
+      "level": 4,
+      "category": "grammar",
+      "question": "Which sentence demonstrates correct use of a future perfect progressive?",
+      "options": ["A. By next year, she will work here for a decade.", "B. By next year, she will have been working here for a decade.", "C. By next year, she has been working here for a decade.", "D. By next year, she would have worked here for a decade."],
+      "answer": "B",
+      "explanation": "The future perfect progressive ('will have been + -ing') emphasizes the ongoing duration of an action up to a future point. 'Will have been working for a decade' correctly expresses ongoing duration."
+    },
+    {
+      "id": "e05",
+      "level": 4,
+      "category": "reading_comprehension",
+      "question": "Read: 'The phenomenon of semantic satiation — whereby prolonged repetition of a word causes it to temporarily lose its meaning — suggests that lexical access is mediated by fatigue-prone neural pathways.' The author implies that:",
+      "options": ["A. Repeating words improves memory.", "B. The brain's word-recognition system can become temporarily overloaded.", "C. Semantic satiation is a permanent condition.", "D. Neural pathways are not involved in language processing."],
+      "answer": "B",
+      "explanation": "The phrase 'fatigue-prone neural pathways' implies these pathways tire with overuse. When they tire, word recognition fails — meaning the system becomes temporarily overloaded, not permanently damaged."
+    },
+    {
+      "id": "e06",
+      "level": 4,
+      "category": "vocabulary",
+      "question": "The word 'tendentious' most accurately means:",
+      "options": ["A. Gentle and relaxed", "B. Expressing a particular point of view; biased", "C. Extremely precise and careful", "D. Prone to sudden outbursts"],
+      "answer": "B",
+      "explanation": "'Tendentious' describes writing, speech, or arguments that promote a particular cause or point of view, often controversially. A tendentious article is written with bias to support a specific agenda."
+    },
+    {
+      "id": "e07",
+      "level": 4,
+      "category": "sentence_structure",
+      "question": "Which best describes the function of 'not only...but also' in: 'She is not only a talented musician but also a gifted writer.'?",
+      "options": ["A. A subordinating conjunction showing contrast", "B. A correlative conjunction emphasizing addition", "C. A coordinating conjunction showing alternatives", "D. An adverbial phrase modifying the verb"],
+      "answer": "B",
+      "explanation": "'Not only...but also' is a correlative conjunction pair that works together to emphasize that two qualities are both true. It adds emphasis beyond a simple 'and', stressing the accumulation of attributes."
+    },
+    {
+      "id": "e08",
+      "level": 4,
+      "category": "grammar",
+      "question": "In formal English, which sentence correctly avoids a split infinitive while preserving clarity?",
+      "options": ["A. To boldly go where no one has gone before.", "B. To go boldly where no one has gone before.", "C. Boldly to go where no one has gone before.", "D. Both B and C avoid splitting the infinitive."],
+      "answer": "D",
+      "explanation": "A split infinitive places an adverb between 'to' and the verb (A). Both B ('to go boldly') and C ('boldly to go') avoid this. While split infinitives are acceptable in modern English, both alternatives are formally correct."
+    },
+    {
+      "id": "e09",
+      "level": 4,
+      "category": "reading_comprehension",
+      "question": "Read: 'The author's use of free indirect discourse blurs the boundary between narrator and character, creating a narrative ambiguity that invites readers to question whose values and perceptions are being privileged.' This passage primarily discusses:",
+      "options": ["A. A character's direct speech patterns", "B. A narrative technique that merges perspectives", "C. The author's personal biography", "D. Plot structure in chronological order"],
+      "answer": "B",
+      "explanation": "Free indirect discourse is a narrative technique blending narrator and character voices without explicit attribution. The passage describes how this 'blurs boundaries' and creates 'ambiguity' — it's about narrative technique and perspective."
+    },
+    {
+      "id": "e10",
+      "level": 4,
+      "category": "vocabulary",
+      "question": "Choose the word that most precisely completes: 'The diplomat's ___ response managed to acknowledge the grievance without committing to any course of action.'",
+      "options": ["A. forthright", "B. truculent", "C. noncommittal", "D. perspicacious"],
+      "answer": "C",
+      "explanation": "'Noncommittal' means not expressing a definite opinion or committing to a course of action. A noncommittal response is deliberately vague. 'Forthright' = direct; 'truculent' = aggressive; 'perspicacious' = insightful."
+    }
+  ]
+}
