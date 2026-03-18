@@ -342,6 +342,8 @@ function renderMinigamePlay(game) {
   $('mg-desc').textContent = descs[game] || '';
   $('mg-result').className = 'result-message';
   $('mg-result').textContent = '';
+  const pointsEl = $('mg-points-display');
+  if (pointsEl) pointsEl.textContent = (App.gameState?.points ?? 0) + ' pts';
 
   const gameArea = $('game-area');
   gameArea.innerHTML = '';
@@ -693,6 +695,8 @@ function updatePointsDisplay(points) {
     App.gameState.points = points;
     const hudPoints = $('hud-points');
     if (hudPoints) hudPoints.querySelector('.hud-val').textContent = points;
+    const mgPts = $('mg-points-display');
+    if (mgPts) mgPts.textContent = points + ' pts';
     setLocalHighScore(points);
   }
 }
