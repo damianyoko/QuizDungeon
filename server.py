@@ -193,9 +193,6 @@ def server_error(e):
     return jsonify({"error": "Internal server error"}), 500
 
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
-
 @app.route('/api/leaderboard', methods=['GET'])
 def get_leaderboard():
     return jsonify(load_leaderboard())
@@ -208,4 +205,7 @@ def submit_score():
     level = int(data.get('level', 1))
     save_to_leaderboard(name, points, level)
     return jsonify({'ok': True, 'leaderboard': load_leaderboard()[:10]})
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
 
