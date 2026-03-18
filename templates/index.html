@@ -159,13 +159,13 @@
 
       <!-- Wheel wrapper -->
       <div style="position:relative;width:340px;height:340px;flex-shrink:0">
-        <!-- Pointer arrow -->
+        <!-- Pointer arrow — top centre pointing down -->
         <div id="wheel-pointer" style="
-          position:absolute;right:-18px;top:50%;transform:translateY(-50%);
+          position:absolute;top:-22px;left:50%;transform:translateX(-50%);
           width:0;height:0;
-          border-top:14px solid transparent;
-          border-bottom:14px solid transparent;
-          border-right:28px solid #22c55e;
+          border-left:14px solid transparent;
+          border-right:14px solid transparent;
+          border-top:28px solid #22c55e;
           z-index:10;filter:drop-shadow(0 0 6px #22c55e88);
         "></div>
         <canvas id="spin-wheel" width="340" height="340" style="cursor:pointer;border-radius:50%;box-shadow:0 0 40px rgba(34,197,94,0.2)"></canvas>

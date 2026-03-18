@@ -1012,6 +1012,7 @@ function drawWheel(angle) {
   WHEEL_SEGMENTS.forEach((seg, i) => {
     const start = (angle * Math.PI / 180) + i * arc;
     const end = start + arc;
+    const mid = start + arc / 2;
 
     // Segment fill
     ctx.beginPath();
@@ -1024,16 +1025,29 @@ function drawWheel(angle) {
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    // Label
+    // Label — always readable (flip if facing left half)
     ctx.save();
     ctx.translate(cx, cy);
-    ctx.rotate(start + arc / 2);
-    ctx.textAlign = 'right';
-    ctx.fillStyle = 'rgba(255,255,255,0.95)';
-    ctx.font = 'bold 15px system-ui, sans-serif';
-    ctx.shadowColor = 'rgba(0,0,0,0.6)';
-    ctx.shadowBlur = 4;
-    ctx.fillText(seg.label, r - 14, 5);
+    // Normalise mid angle to 0..2PI
+    const normMid = ((mid % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+    const facingLeft = normMid > Math.PI / 2 && normMid < 3 * Math.PI / 2;
+    if (facingLeft) {
+      ctx.rotate(mid + Math.PI);
+      ctx.textAlign = 'left';
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.font = 'bold 14px system-ui, sans-serif';
+      ctx.shadowColor = 'rgba(0,0,0,0.7)';
+      ctx.shadowBlur = 4;
+      ctx.fillText(seg.label, -(r - 14), 5);
+    } else {
+      ctx.rotate(mid);
+      ctx.textAlign = 'right';
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.font = 'bold 14px system-ui, sans-serif';
+      ctx.shadowColor = 'rgba(0,0,0,0.7)';
+      ctx.shadowBlur = 4;
+      ctx.fillText(seg.label, r - 14, 5);
+    }
     ctx.restore();
   });
 
@@ -1057,14 +1071,14 @@ function spinWheel() {
   if (resultEl) resultEl.style.display = 'none';
   if (btnEl) { btnEl.disabled = true; btnEl.textContent = 'Spinning…'; }
 
-  // Pick a random segment (pointer is at right = 0° offset)
+  // Pick a random segment (pointer is at top = 270° = -90°)
   const n = WHEEL_SEGMENTS.length;
   const arc = 360 / n;
   const targetIdx = Math.floor(Math.random() * n);
-  // We want the centre of targetIdx segment to land at 0° (right side = pointer)
-  // Segment i starts at i*arc. Centre is at i*arc + arc/2.
-  // We want final angle such that -(i*arc + arc/2) mod 360 is at 0°
-  const targetAngle = 360 - (targetIdx * arc + arc / 2);
+  // Pointer is at top (270°). Segment i centre is at i*arc + arc/2.
+  // We need rotation R so that: (R + i*arc + arc/2) % 360 == 270
+  // => R = (270 - i*arc - arc/2 + 360) % 360
+  const targetAngle = (270 - (targetIdx * arc + arc / 2) + 720) % 360;
   const extraSpins = 5 + Math.floor(Math.random() * 4); // 5–8 full rotations
   const finalAngle = extraSpins * 360 + targetAngle;
 
