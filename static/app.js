@@ -1075,16 +1075,23 @@ function spinWheel() {
   const n = WHEEL_SEGMENTS.length;
   const arc = 360 / n;
   const targetIdx = Math.floor(Math.random() * n);
-  // Pointer is at top (270°). Segment i centre is at i*arc + arc/2.
-  // We need rotation R so that: (R + i*arc + arc/2) % 360 == 270
-  // => R = (270 - i*arc - arc/2 + 360) % 360
-  const targetAngle = (270 - (targetIdx * arc + arc / 2) + 720) % 360;
+  // Pointer is at top (270°). We need the wheel rotated so that
+  // (wheelAngle + segmentCentre) % 360 == 270
+  // => targetAbsAngle = (270 - segmentCentre + 720) % 360
+  const segCentre = targetIdx * arc + arc / 2;
+  const targetAbsAngle = (270 - segCentre + 720) % 360;
+
+  const startAngle = wheelAngle % 360;
+  // How many degrees to rotate from current position to reach target
+  // Always rotate forward (positive), minimum 0
+  let deltaToTarget = (targetAbsAngle - startAngle + 360) % 360;
+  if (deltaToTarget < 1) deltaToTarget = 360; // avoid 0-rotation edge case
+
   const extraSpins = 5 + Math.floor(Math.random() * 4); // 5–8 full rotations
-  const finalAngle = extraSpins * 360 + targetAngle;
+  const finalAngle = extraSpins * 360 + deltaToTarget;
 
   const duration = 4000 + Math.random() * 1000; // 4–5s
   const start = performance.now();
-  const startAngle = wheelAngle % 360;
 
   function easeOut(t) {
     return 1 - Math.pow(1 - t, 4);
