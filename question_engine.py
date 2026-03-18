@@ -54,26 +54,39 @@ class QuestionEngine:
         """Return a single question by its ID."""
         return self._questions_by_id.get(question_id)
 
+    def get_trivia_questions(self, count=1):
+        """Return random trivia questions (level='any', category='trivia')."""
+        trivia = [q for q in self.questions if q.get('category') == 'trivia' or q.get('type') == 'trivia']
+        random.shuffle(trivia)
+        return trivia[:count]
+
     def get_questions_for_level(self, level, count=10):
         """
         Return a list of questions appropriate for the given game level.
+        Always includes 1 trivia question per round.
         Level 1 = beginner, 2 = intermediate, 3 = advanced, 4 = expert,
         5 = boss (mix of advanced + expert).
         """
+        # Get 1 trivia question
+        trivia = self.get_trivia_questions(1)
+
         if level == 5:
-            # Boss level: mix advanced (level 3) and expert (level 4)
             advanced = list(self._questions_by_level.get(3, []))
             expert = list(self._questions_by_level.get(4, []))
-            pool = advanced + expert
+            pool = [q for q in advanced + expert if q.get('category') != 'trivia']
         else:
-            pool = list(self._questions_by_level.get(level, []))
+            pool = [q for q in self._questions_by_level.get(level, []) if q.get('category') != 'trivia']
 
         if not pool:
-            # Fallback: return questions from any level
-            pool = list(self.questions)
+            pool = [q for q in self.questions if q.get('category') != 'trivia']
 
         random.shuffle(pool)
-        return pool[:count]
+        esl_qs = pool[:count - len(trivia)]
+
+        # Shuffle trivia into random position
+        combined = esl_qs + trivia
+        random.shuffle(combined)
+        return combined
 
     def get_all_questions(self):
         """Return all questions."""

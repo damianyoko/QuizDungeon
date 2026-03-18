@@ -182,6 +182,7 @@ function categoryDisplay(cat) {
     grammar: '✏️ Grammar',
     sentence_structure: '🔗 Sentence Structure',
     reading_comprehension: '📚 Reading',
+    trivia: '🌍 Trivia',
   };
   return map[cat] || cat;
 }
@@ -205,15 +206,36 @@ function renderQuestion(state) {
 
   const optionsGrid = $('options-grid');
   optionsGrid.innerHTML = '';
-  q.options.forEach((opt, idx) => {
-    const letter = String.fromCharCode(65 + idx);
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.dataset.answer = letter;
-    btn.innerHTML = `<span class="option-key">${letter}</span><span class="option-text">${opt.replace(/^[A-D]\.\s*/, '')}</span>`;
-    btn.addEventListener('click', () => submitAnswer(letter, btn));
-    optionsGrid.appendChild(btn);
-  });
+
+  const qType = q.type || 'mcq';
+  const typeLabels = { mcq: categoryDisplay(q.category), true_false: '✅ True or False', fill_blank: '✏️ Fill in the Blank', trivia: '🌍 Trivia Bonus' };
+  const badge = $('q-category');
+  if (badge) badge.textContent = typeLabels[qType] || categoryDisplay(q.category);
+
+  if (qType === 'true_false') {
+    ['True', 'False'].forEach((label, idx) => {
+      const letter = idx === 0 ? 'A' : 'B';
+      const btn = document.createElement('button');
+      btn.className = 'option-btn';
+      btn.dataset.answer = letter;
+      btn.style.cssText = 'font-size:1.1rem;padding:18px;justify-content:center;gap:10px;';
+      btn.innerHTML = `<span>${idx === 0 ? '✅' : '❌'}</span><span>${label}</span>`;
+      btn.addEventListener('click', () => submitAnswer(letter, btn));
+      optionsGrid.appendChild(btn);
+    });
+    optionsGrid.style.gridTemplateColumns = '1fr 1fr';
+  } else {
+    optionsGrid.style.gridTemplateColumns = '';
+    q.options.forEach((opt, idx) => {
+      const letter = String.fromCharCode(65 + idx);
+      const btn = document.createElement('button');
+      btn.className = 'option-btn';
+      btn.dataset.answer = letter;
+      btn.innerHTML = `<span class="option-key">${letter}</span><span class="option-text">${opt.replace(/^[A-D]\.\s*/, '')}</span>`;
+      btn.addEventListener('click', () => submitAnswer(letter, btn));
+      optionsGrid.appendChild(btn);
+    });
+  }
 
   // Reset feedback
   const feedback = $('feedback-area');
