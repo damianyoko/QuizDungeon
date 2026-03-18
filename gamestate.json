@@ -1,23 +1,23 @@
 {
   "lives": 3,
-  "points": 450,
+  "points": 0,
   "level": 2,
   "current_round_questions": [
-    "i06",
+    "i07",
+    "i10",
     "i09",
-    "i04",
+    "i06",
+    "i01",
+    "i02",
     "i03",
     "i08",
-    "i05",
-    "i07",
-    "i01",
-    "i10",
-    "i02"
+    "i04",
+    "i05"
   ],
-  "current_question_index": 10,
+  "current_question_index": 0,
   "phase": "question",
   "round_number": 2,
-  "questions_answered_this_round": 10,
+  "questions_answered_this_round": 0,
   "boss_active": false,
   "boss_time_limit": 10,
   "high_score": 450

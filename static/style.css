@@ -130,13 +130,19 @@ p { line-height: 1.7; }
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  animation: fadeIn var(--transition-med);
 }
 
 .screen.active {
   display: flex;
+  animation: chamberEnter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+@keyframes chamberEnter {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Keep fadeIn alias for toasts / results that still reference it */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -146,6 +152,7 @@ p { line-height: 1.7; }
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 /* ─── HUD ─── */
@@ -157,7 +164,7 @@ p { line-height: 1.7; }
   background: rgba(13, 11, 8, 0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
-  padding: 10px 20px;
+  padding: 7px 16px;
   width: 100%;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
 }
@@ -336,7 +343,7 @@ p { line-height: 1.7; }
   border: 1px solid var(--border-color);
   border-top-color: #4a3a25;
   border-radius: var(--radius-lg);
-  padding: 22px;
+  padding: 16px;
   box-shadow: var(--shadow-card);
   /* Carved stone inset feel */
   background-image:
@@ -352,14 +359,14 @@ p { line-height: 1.7; }
 /* ─── Main Menu Screen ─── */
 #main-menu {
   justify-content: center;
-  gap: 28px;
+  gap: 18px;
   /* Dungeon entrance glow from above — torchlight */
   background: radial-gradient(ellipse at center top, rgba(217, 119, 6, 0.07) 0%, transparent 55%);
 }
 
 .logo-section {
   text-align: center;
-  padding: 40px 20px 16px;
+  padding: 24px 20px 10px;
 }
 
 .logo-title {
@@ -393,7 +400,7 @@ p { line-height: 1.7; }
 .menu-buttons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 9px;
   width: 100%;
   max-width: 300px;
 }
@@ -460,10 +467,10 @@ p { line-height: 1.7; }
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  padding: 24px 0;
+  padding: 16px 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .question-header {
@@ -512,7 +519,7 @@ p { line-height: 1.7; }
 }
 
 .question-card {
-  padding: 24px;
+  padding: 14px;
 }
 
 .question-text {
@@ -645,6 +652,25 @@ p { line-height: 1.7; }
   animation: fadeIn var(--transition-fast);
 }
 
+.feedback-area.correct.show {
+  animation: goldGlow 0.6s ease forwards, pulseCorrect 0.4s ease;
+}
+
+.feedback-area.wrong.show {
+  animation: bloodFlash 0.5s ease, shakeWrong 0.5s ease;
+}
+
+@keyframes goldGlow {
+  0%   { box-shadow: 0 0 0 rgba(217,119,6,0); }
+  50%  { box-shadow: 0 0 30px rgba(217,119,6,0.5); }
+  100% { box-shadow: 0 0 10px rgba(217,119,6,0.2); }
+}
+
+@keyframes bloodFlash {
+  0%, 100% { background: transparent; }
+  25%       { background: rgba(220,38,38,0.15); }
+}
+
 /* Correct feedback — stone slab with rune/moss feel */
 .feedback-area.correct {
   background: linear-gradient(135deg, #0f2014, #142a18);
@@ -710,7 +736,7 @@ p { line-height: 1.7; }
 
 .minigame-header {
   text-align: center;
-  padding: 28px 20px 16px;
+  padding: 18px 20px 12px;
 }
 
 .minigame-header h2 {
@@ -733,7 +759,7 @@ p { line-height: 1.7; }
   border: 1px solid var(--border-color);
   border-top-color: #4a3a25;
   border-radius: var(--radius-lg);
-  padding: 24px 18px;
+  padding: 16px 14px;
   text-align: center;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -782,10 +808,10 @@ p { line-height: 1.7; }
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 24px 0;
+  padding: 16px 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .game-area {
@@ -1084,15 +1110,15 @@ p { line-height: 1.7; }
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  padding: 24px 0;
+  padding: 16px 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .boss-header {
   text-align: center;
-  padding: 20px;
+  padding: 14px;
 }
 
 .boss-title {
@@ -1423,6 +1449,113 @@ p { line-height: 1.7; }
 
 /* ─── Selection ─── */
 ::selection { background: rgba(217, 119, 6, 0.25); color: var(--text-primary); }
+
+/* ─── Torch Flicker — subtle amber oscillation on key accent elements ─── */
+@keyframes torchFlicker {
+  0%   { filter: brightness(0.85); }
+  20%  { filter: brightness(1.0); }
+  40%  { filter: brightness(0.92); }
+  60%  { filter: brightness(1.0); }
+  80%  { filter: brightness(0.88); }
+  100% { filter: brightness(1.0); }
+}
+
+.logo-title,
+.boss-title,
+#hud-lives,
+#hud-points,
+#hud-level,
+#timer-seconds {
+  animation: torchFlicker 3.5s ease-in-out infinite;
+}
+
+/* Stagger flicker so elements don't all pulse together */
+.boss-title         { animation-delay: 0.3s; }
+#hud-points         { animation-delay: 0.7s; }
+#hud-level          { animation-delay: 1.1s; }
+#timer-seconds      { animation-delay: 0.5s; }
+
+/* ─── HUD Lives — critical pulse when <= 2 ─── */
+.lives-critical {
+  animation: criticalPulse 1s ease infinite !important;
+}
+
+@keyframes criticalPulse {
+  0%, 100% { color: #dc2626; }
+  50%       { color: #fca5a5; text-shadow: 0 0 10px rgba(220,38,38,0.8); }
+}
+
+/* ─── Timer Bar — torch burn shimmer ─── */
+#timer-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+#timer-bar::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 12px; height: 100%;
+  background: rgba(255,255,255,0.4);
+  filter: blur(4px);
+  animation: burnGlow 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes burnGlow {
+  from { opacity: 0.3; }
+  to   { opacity: 0.9; }
+}
+
+/* ─── Dungeon Particles — floating ember sparks ─── */
+#dungeon-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#dungeon-particles span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #d97706;
+  opacity: 0;
+  animation: floatEmber 8s ease-in infinite;
+}
+
+#dungeon-particles span:nth-child(1) { left: 10%; animation-delay: 0s;   animation-duration: 7s; }
+#dungeon-particles span:nth-child(2) { left: 25%; animation-delay: 1.5s; animation-duration: 9s; }
+#dungeon-particles span:nth-child(3) { left: 40%; animation-delay: 3s;   animation-duration: 6s; }
+#dungeon-particles span:nth-child(4) { left: 55%; animation-delay: 0.5s; animation-duration: 11s; }
+#dungeon-particles span:nth-child(5) { left: 70%; animation-delay: 2s;   animation-duration: 8s; }
+#dungeon-particles span:nth-child(6) { left: 82%; animation-delay: 4s;   animation-duration: 7s; }
+#dungeon-particles span:nth-child(7) { left: 18%; animation-delay: 5s;   animation-duration: 10s; }
+#dungeon-particles span:nth-child(8) { left: 62%; animation-delay: 1s;   animation-duration: 9s; }
+
+@keyframes floatEmber {
+  0%   { bottom: -10px; opacity: 0; transform: translateX(0) scale(1); }
+  10%  { opacity: 0.6; }
+  50%  { transform: translateX(20px) scale(0.8); opacity: 0.4; }
+  90%  { opacity: 0.2; }
+  100% { bottom: 100vh; opacity: 0; transform: translateX(-10px) scale(0.4); }
+}
+
+/* ─── Stone wall background (reinforced) ─── */
+body {
+  background-color: #0d0b08;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(80,40,10,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(60,30,5,0.06) 0%, transparent 40%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,0.02) 3px, rgba(0,0,0,0.02) 5px);
+}
+
+/* Vignette (tightened) */
+body::after {
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%);
+}
 
 /* ─── Responsive ─── */
 @media (max-width: 600px) {

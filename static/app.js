@@ -87,7 +87,13 @@ function updateHUD(state) {
   const livesArr = Array.from({ length: 5 }, (_, i) =>
     i < state.lives ? '❤️' : '🖤'
   ).join('');
-  $('hud-lives').querySelector('.hud-val').textContent = livesArr;
+  const hudLives = $('hud-lives');
+  hudLives.querySelector('.hud-val').textContent = livesArr;
+  if (state.lives <= 2) {
+    hudLives.classList.add('lives-critical');
+  } else {
+    hudLives.classList.remove('lives-critical');
+  }
   $('hud-points').querySelector('.hud-val').textContent = state.points;
 
   const levelNames = { 1: 'Beginner', 2: 'Intermediate', 3: 'Advanced', 4: 'Expert', 5: '⚔️ BOSS' };
