@@ -68,7 +68,8 @@ class GameEngine:
         state["total_questions_this_round"] = len(state["current_round_questions"])
         return state
 
-    def start_new_game(self):
+    def start_new_game(self, player_name='Anonymous'):
+        self.player_name = player_name.strip() or 'Anonymous'
         """Reset game to initial state and load first round questions."""
         high_score = self.state.get("high_score", 0)
         self.state = self._default_state()

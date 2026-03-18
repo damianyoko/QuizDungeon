@@ -32,7 +32,7 @@ class QuestionEngine:
         try:
             with open(self.questions_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            self.questions = data.get("questions", [])
+            self.questions = data.get("questions", data) if isinstance(data, dict) else data
         except (json.JSONDecodeError, IOError, FileNotFoundError) as e:
             print(f"Warning: Could not load questions: {e}")
             self.questions = []

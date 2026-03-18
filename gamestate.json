@@ -1,24 +1,24 @@
 {
-  "lives": 1,
-  "points": 120,
-  "level": 3,
+  "lives": 5,
+  "points": 0,
+  "level": 1,
   "current_round_questions": [
-    "a09",
-    "a06",
-    "a03",
-    "a10",
-    "a04",
-    "a08",
-    "a02",
-    "a07",
-    "a05",
-    "a01"
+    "b09",
+    "b06",
+    "b08",
+    "b07",
+    "b04",
+    "b05",
+    "b02",
+    "b03",
+    "b10",
+    "b01"
   ],
   "current_question_index": 0,
   "phase": "question",
-  "round_number": 3,
+  "round_number": 1,
   "questions_answered_this_round": 0,
   "boss_active": false,
   "boss_time_limit": 10,
-  "high_score": 0
+  "high_score": 260
 }

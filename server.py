@@ -1,6 +1,21 @@
 import json
 import os
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, request, jsonify, render_template
+import pathlib
+
+LEADERBOARD_FILE = pathlib.Path("leaderboard.json")
+
+def load_leaderboard():
+    if LEADERBOARD_FILE.exists():
+        return json.loads(LEADERBOARD_FILE.read_text())
+    return []
+
+def save_to_leaderboard(name, points, level):
+    import datetime
+    board = load_leaderboard()
+    board.append({"name": name, "points": points, "level": level, "date": datetime.date.today().isoformat()})
+    board = sorted(board, key=lambda x: x["points"], reverse=True)[:100]
+    LEADERBOARD_FILE.write_text(json.dumps(board, indent=2))
 
 from game_engine import GameEngine
 from question_engine import QuestionEngine
@@ -30,7 +45,9 @@ def index():
 @app.route("/api/start", methods=["POST"])
 def api_start():
     """Start a new game."""
-    state = game_engine.start_new_game()
+    data = request.get_json(silent=True) or {}
+    player_name = data.get('player_name', 'Anonymous')
+    state = game_engine.start_new_game(player_name=player_name)
     return jsonify(state)
 
 
@@ -177,3 +194,17 @@ def server_error(e):
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
+
+@app.route('/api/leaderboard', methods=['GET'])
+def get_leaderboard():
+    return jsonify(load_leaderboard())
+
+@app.route('/api/leaderboard/submit', methods=['POST'])
+def submit_score():
+    data = request.get_json(silent=True) or {}
+    name = data.get('name', 'Anonymous')
+    points = int(data.get('points', 0))
+    level = int(data.get('level', 1))
+    save_to_leaderboard(name, points, level)
+    return jsonify({'ok': True, 'leaderboard': load_leaderboard()[:10]})
+

@@ -57,6 +57,13 @@
       🏆 High Score: <span id="menu-high-score">0</span> pts
     </div>
 
+    <div class="name-input-wrap" style="max-width:360px;margin:0 auto 16px;">
+      <label style="color:var(--text-secondary);font-size:0.85rem;display:block;margin-bottom:6px;">Your Name</label>
+      <input id="player-name-input" type="text" maxlength="20" placeholder="Enter your name..."
+        style="width:100%;padding:10px 14px;background:var(--card-bg);border:1px solid rgba(255,255,255,0.12);border-radius:8px;color:var(--text-primary);font-size:1rem;outline:none;box-sizing:border-box;"
+        onkeydown="if(event.key==='Enter') document.getElementById('btn-new-game').click()" />
+      <p id="name-error" style="color:#ef4444;font-size:0.8rem;margin-top:4px;display:none;">Please enter your name to play.</p>
+    </div>
     <div class="menu-buttons">
       <button id="btn-new-game" class="btn btn-primary btn-large btn-full">
         🎮 New Game
@@ -64,8 +71,8 @@
       <button id="btn-continue" class="btn btn-secondary btn-large btn-full">
         ▶ Continue
       </button>
-      <button id="btn-how-to-play" class="btn btn-outline btn-full">
-        ❓ How to Play
+      <button id="btn-leaderboard" class="btn btn-outline btn-full">
+        🏆 Leaderboard
       </button>
     </div>
 
@@ -327,5 +334,22 @@
 </div><!-- /#app -->
 
 <script src="/static/app.js"></script>
+
+  <!-- ══════════════════════════════════════════
+       SCREEN — LEADERBOARD
+  ══════════════════════════════════════════ -->
+  <div id="leaderboard-screen" class="screen">
+    <div class="container" style="max-width:600px">
+      <h2 style="text-align:center;margin-bottom:4px">🏆 Leaderboard</h2>
+      <p style="text-align:center;color:var(--text-secondary);font-size:0.85rem;margin-bottom:20px">Top 10 players</p>
+      <div id="leaderboard-table" style="width:100%">
+        <div style="text-align:center;color:var(--text-secondary);padding:20px">Loading...</div>
+      </div>
+      <div style="text-align:center;margin-top:24px">
+        <button class="btn btn-secondary" onclick="showScreen('main-menu')">← Back</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

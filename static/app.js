@@ -109,8 +109,22 @@ async function initMainMenu() {
 }
 
 async function startNewGame() {
+  const nameInput = document.getElementById('player-name-input');
+  const nameError = document.getElementById('name-error');
+  const playerName = nameInput ? nameInput.value.trim() : '';
+  if (nameInput && !playerName) {
+    if (nameError) nameError.style.display = 'block';
+    nameInput.focus();
+    return;
+  }
+  if (nameError) nameError.style.display = 'none';
+  App.playerName = playerName || 'Anonymous';
   try {
-    const state = await apiFetch('/api/start', { method: 'POST' });
+    const state = await apiFetch('/api/start', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ player_name: App.playerName })
+    });
     App.gameState = state;
     updateHUD(state);
     renderQuestion(state);
@@ -873,6 +887,7 @@ async function loadNextBossQuestion() {
 
 // ─── Game Over ────────────────────────────────
 function showGameOver(state) {
+  submitScore(data?.points || 0, data?.level || 1);
   clearBossTimer();
   const score = state.points || 0;
   const isNewRecord = setLocalHighScore(score);
@@ -893,6 +908,7 @@ function showGameOver(state) {
 
 // ─── Victory ─────────────────────────────────
 function showVictory(state) {
+  submitScore(data?.points || 0, data?.level || 5);
   clearBossTimer();
   const score = state.points || 0;
   const isNewRecord = setLocalHighScore(score);
@@ -945,6 +961,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   $('finish-round-btn')?.addEventListener('click', finishRound);
 
   // Minigame select
+    document.getElementById('btn-leaderboard')?.addEventListener('click', showLeaderboard);
+
   $$('.minigame-card').forEach((card) => {
     card.addEventListener('click', () => selectMinigame(card.dataset.game));
   });
@@ -1114,4 +1132,46 @@ function initWheelScreen() {
   if (canvas) {
     canvas.onclick = spinWheel;
   }
+}
+
+
+// ══════════════════════════════════════════════════════════
+//  LEADERBOARD
+// ══════════════════════════════════════════════════════════
+async function showLeaderboard() {
+  showScreen('leaderboard-screen');
+  const tableEl = document.getElementById('leaderboard-table');
+  tableEl.innerHTML = '<div style="text-align:center;color:var(--text-secondary);padding:20px">Loading...</div>';
+  try {
+    const board = await apiFetch('/api/leaderboard');
+    if (!board || board.length === 0) {
+      tableEl.innerHTML = '<div style="text-align:center;color:var(--text-secondary);padding:20px">No scores yet. Be the first!</div>';
+      return;
+    }
+    const rows = board.slice(0, 10).map((entry, i) => {
+      const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i+1}.`;
+      const lvlNames = {1:'Beginner',2:'Intermediate',3:'Advanced',4:'Expert',5:'Boss'};
+      const lvl = lvlNames[entry.level] || `Level ${entry.level}`;
+      return `<div style="display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:8px;background:var(--card-bg);margin-bottom:6px;">
+        <span style="font-size:1.2rem;min-width:32px">${medal}</span>
+        <span style="flex:1;font-weight:600;color:var(--text-primary)">${entry.name}</span>
+        <span style="color:var(--text-secondary);font-size:0.8rem">${lvl}</span>
+        <span style="font-weight:800;color:var(--accent);font-family:var(--mono)">${entry.points} pts</span>
+      </div>`;
+    }).join('');
+    tableEl.innerHTML = rows;
+  } catch(e) {
+    tableEl.innerHTML = '<div style="text-align:center;color:#ef4444;padding:20px">Failed to load leaderboard.</div>';
+  }
+}
+
+async function submitScore(points, level) {
+  const name = App.playerName || 'Anonymous';
+  try {
+    await apiFetch('/api/leaderboard/submit', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ name, points, level })
+    });
+  } catch(e) { /* silent */ }
 }
