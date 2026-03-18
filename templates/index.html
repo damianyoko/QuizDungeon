@@ -123,6 +123,14 @@
         <div class="question-counter" id="q-counter">0 / 10</div>
       </div>
 
+      <!-- Timer bar -->
+      <div id="question-timer-wrap" style="margin:8px 0 4px;display:flex;align-items:center;gap:10px;">
+        <span id="timer-seconds" style="font-family:var(--mono);font-weight:800;font-size:1.1rem;color:var(--accent);min-width:32px">60</span>
+        <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;">
+          <div id="timer-bar" style="height:100%;width:100%;background:var(--accent);border-radius:3px;transition:width 0.5s linear,background 0.5s;"></div>
+        </div>
+      </div>
+
       <!-- Question card -->
       <div class="card question-card">
         <p class="question-text" id="q-text">Loading question...</p>

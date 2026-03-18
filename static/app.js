@@ -187,6 +187,80 @@ function categoryDisplay(cat) {
   return map[cat] || cat;
 }
 
+
+// ══════════════════════════════════════════════════════════
+//  QUESTION TIMER
+// ══════════════════════════════════════════════════════════
+const QUESTION_TIME = 60; // seconds
+let _timerInterval = null;
+let _timerRemaining = QUESTION_TIME;
+let _timerStartedAt = null;
+
+function startQuestionTimer() {
+  clearQuestionTimer();
+  _timerRemaining = QUESTION_TIME;
+  _timerStartedAt = Date.now();
+  _updateTimerUI(QUESTION_TIME);
+
+  _timerInterval = setInterval(() => {
+    const elapsed = Math.floor((Date.now() - _timerStartedAt) / 1000);
+    _timerRemaining = Math.max(0, QUESTION_TIME - elapsed);
+    _updateTimerUI(_timerRemaining);
+
+    if (_timerRemaining <= 0) {
+      clearQuestionTimer();
+      _onTimerExpired();
+    }
+  }, 500);
+}
+
+function clearQuestionTimer() {
+  if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
+}
+
+function getTimerBonus() {
+  // Max bonus = 20pts at full time, 0 at time-out. Linear.
+  return Math.round((_timerRemaining / QUESTION_TIME) * 20);
+}
+
+function _updateTimerUI(seconds) {
+  const secEl = document.getElementById('timer-seconds');
+  const barEl = document.getElementById('timer-bar');
+  if (secEl) secEl.textContent = seconds;
+  if (barEl) {
+    const pct = (seconds / QUESTION_TIME) * 100;
+    barEl.style.width = pct + '%';
+    if (pct > 50) barEl.style.background = 'var(--accent)';
+    else if (pct > 20) barEl.style.background = '#f59e0b';
+    else barEl.style.background = '#ef4444';
+  }
+}
+
+async function _onTimerExpired() {
+  if (!App.currentQuestion) return;
+  // Disable all options
+  document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+  // Auto-submit wrong answer — send a sentinel
+  try {
+    const result = await apiFetch('/api/answer', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ question_id: App.currentQuestion.id, answer: '__TIMEOUT__' })
+    });
+    showFeedback(result, null);
+    App.gameState = { ...App.gameState, ...result };
+    updateHUD(result);
+    if (result.game_over) { setTimeout(() => showGameOver(result), 1500); return; }
+    const nextBtn = document.getElementById('next-question-btn');
+    const finishBtn = document.getElementById('finish-round-btn');
+    if (result.round_complete) {
+      if (finishBtn) finishBtn.style.display = '';
+    } else {
+      if (nextBtn) nextBtn.style.display = '';
+    }
+  } catch(e) {}
+}
+
 function renderQuestion(state) {
   const q = state.current_question;
   if (!q) {
@@ -197,6 +271,7 @@ function renderQuestion(state) {
 
   App.currentQuestion = q;
   updateHUD(state);
+  startQuestionTimer();
 
   $('q-category').textContent = categoryDisplay(q.category);
   const levelNames = ['', 'Beginner', 'Intermediate', 'Advanced', 'Expert'];
@@ -248,6 +323,7 @@ function renderQuestion(state) {
 
 async function submitAnswer(answer, clickedBtn) {
   if (!App.currentQuestion) return;
+  clearQuestionTimer();
 
   // Disable all options
   $$('.option-btn', $('options-grid')).forEach((b) => (b.disabled = true));
@@ -258,6 +334,7 @@ async function submitAnswer(answer, clickedBtn) {
       body: JSON.stringify({
         question_id: App.currentQuestion.id,
         answer,
+        time_bonus: getTimerBonus(),
       }),
     });
 
@@ -275,20 +352,29 @@ async function submitAnswer(answer, clickedBtn) {
     // Feedback
     const feedback = $('feedback-area');
     if (result.correct) {
+      const bonusText = result.time_bonus > 0 ? ` <span style="font-size:0.8rem;opacity:0.8">(+${result.time_bonus} speed bonus)</span>` : '';
       feedback.className = 'feedback-area correct show';
       feedback.innerHTML = `
         <span class="feedback-icon">✅</span>
         <div>
-          <div class="feedback-points">+${result.points_earned} points!</div>
+          <div class="feedback-points">+${result.points_earned} pts!${bonusText}</div>
           <div class="feedback-text">${result.explanation}</div>
+        </div>`;
+    } else if (result.timed_out) {
+      feedback.className = 'feedback-area wrong show';
+      feedback.innerHTML = `
+        <span class="feedback-icon">⏰</span>
+        <div>
+          <div class="feedback-points">Time's up! -1 life</div>
+          <div class="feedback-text">Correct answer: ${result.correct_answer}. ${result.explanation}</div>
         </div>`;
     } else {
       feedback.className = 'feedback-area wrong show';
       feedback.innerHTML = `
         <span class="feedback-icon">❌</span>
         <div>
-          <div class="feedback-points">-1 life</div>
-          <div class="feedback-text">${result.explanation}</div>
+          <div class="feedback-points">Wrong! -1 life</div>
+          <div class="feedback-text">Correct answer: ${result.correct_answer}. ${result.explanation}</div>
         </div>`;
     }
 

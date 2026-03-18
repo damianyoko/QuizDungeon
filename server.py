@@ -71,7 +71,8 @@ def api_answer():
     if not question_id or not answer:
         return jsonify({"error": "question_id and answer required"}), 400
 
-    result = game_engine.answer_question(question_id, answer)
+    answer_meta = {"time_bonus": data.get("time_bonus", 0)}
+    result = game_engine.answer_question(question_id, answer, answer_meta=answer_meta)
     return jsonify(result)
 
 

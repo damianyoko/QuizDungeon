@@ -81,7 +81,7 @@ class GameEngine:
         self._save_state()
         return self.get_state()
 
-    def answer_question(self, question_id, answer):
+    def answer_question(self, question_id, answer, answer_meta=None):
         """Process a question answer. Returns result dict."""
         if self.state["phase"] not in ("question",):
             return {"error": "Not in question phase"}
@@ -90,12 +90,16 @@ class GameEngine:
         if not question:
             return {"error": "Question not found"}
 
-        correct = answer.strip().upper() == question["answer"].upper()
+        timed_out = answer.strip() == '__TIMEOUT__'
+        correct = (not timed_out) and answer.strip().upper() == question["answer"].upper()
         points_earned = 0
+        time_bonus = 0
         explanation = question.get("explanation", "")
 
         if correct:
-            points_earned = POINTS_PER_LEVEL.get(self.state["level"], 10)
+            base = POINTS_PER_LEVEL.get(self.state["level"], 10)
+            time_bonus = int(answer_meta.get("time_bonus", 0)) if isinstance(answer_meta, dict) else 0
+            points_earned = base + time_bonus
             self.state["points"] += points_earned
         else:
             self.state["lives"] -= 1
@@ -119,9 +123,11 @@ class GameEngine:
 
         return {
             "correct": correct,
+            "timed_out": timed_out,
             "explanation": explanation,
             "correct_answer": question["answer"],
             "points_earned": points_earned,
+            "time_bonus": time_bonus,
             "lives_remaining": self.state["lives"],
             "points": self.state["points"],
             "game_over": game_over,
