@@ -1,0 +1,24 @@
+{
+  "lives": 1,
+  "points": 120,
+  "level": 2,
+  "current_round_questions": [
+    "i09",
+    "i05",
+    "i03",
+    "i04",
+    "i07",
+    "i10",
+    "i01",
+    "i06",
+    "i02",
+    "i08"
+  ],
+  "current_question_index": 10,
+  "phase": "question",
+  "round_number": 2,
+  "questions_answered_this_round": 10,
+  "boss_active": false,
+  "boss_time_limit": 10,
+  "high_score": 0
+}

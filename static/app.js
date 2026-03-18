@@ -28,6 +28,7 @@ function showScreen(screenId) {
   $$('.screen').forEach((s) => s.classList.remove('active'));
   const target = $(screenId);
   if (target) target.classList.add('active');
+  if (screenId === 'minigame-select') { setTimeout(initWheelScreen, 50); }
 
   const gameScreens = ['question-screen', 'minigame-select', 'minigame-play', 'boss-screen'];
   const hud = $('hud');
@@ -958,3 +959,155 @@ document.addEventListener('DOMContentLoaded', async () => {
   $('menu-high-score').textContent = getLocalHighScore();
   showScreen('main-menu');
 });
+
+
+// ══════════════════════════════════════════════════════════
+//  SPIN WHEEL
+// ══════════════════════════════════════════════════════════
+const WHEEL_SEGMENTS = [
+  { game: 'blackjack', label: 'Blackjack', color: '#3b82f6' },
+  { game: 'highlow',   label: 'High / Low', color: '#22c55e' },
+  { game: 'dice',      label: 'Dice Duel',  color: '#f59e0b' },
+  { game: 'roulette',  label: 'Roulette',   color: '#ef4444' },
+];
+
+let wheelAngle = 0;       // current rotation in degrees
+let wheelSpinning = false;
+let wheelSelected = null;
+
+function drawWheel(angle) {
+  const canvas = document.getElementById('spin-wheel');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  const r = cx - 4;
+  const n = WHEEL_SEGMENTS.length;
+  const arc = (2 * Math.PI) / n;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  WHEEL_SEGMENTS.forEach((seg, i) => {
+    const start = (angle * Math.PI / 180) + i * arc;
+    const end = start + arc;
+
+    // Segment fill
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, start, end);
+    ctx.closePath();
+    ctx.fillStyle = seg.color;
+    ctx.fill();
+    ctx.strokeStyle = '#0f0f13';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Label
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(start + arc / 2);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = 'rgba(255,255,255,0.95)';
+    ctx.font = 'bold 15px system-ui, sans-serif';
+    ctx.shadowColor = 'rgba(0,0,0,0.6)';
+    ctx.shadowBlur = 4;
+    ctx.fillText(seg.label, r - 14, 5);
+    ctx.restore();
+  });
+
+  // Centre circle
+  ctx.beginPath();
+  ctx.arc(cx, cy, 28, 0, 2 * Math.PI);
+  ctx.fillStyle = '#0f0f13';
+  ctx.fill();
+  ctx.strokeStyle = '#ffffff22';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+
+function spinWheel() {
+  if (wheelSpinning) return;
+  wheelSpinning = true;
+
+  // Hide result, disable button
+  const resultEl = document.getElementById('wheel-result');
+  const btnEl    = document.getElementById('wheel-spin-btn');
+  if (resultEl) resultEl.style.display = 'none';
+  if (btnEl) { btnEl.disabled = true; btnEl.textContent = 'Spinning…'; }
+
+  // Pick a random segment (pointer is at right = 0° offset)
+  const n = WHEEL_SEGMENTS.length;
+  const arc = 360 / n;
+  const targetIdx = Math.floor(Math.random() * n);
+  // We want the centre of targetIdx segment to land at 0° (right side = pointer)
+  // Segment i starts at i*arc. Centre is at i*arc + arc/2.
+  // We want final angle such that -(i*arc + arc/2) mod 360 is at 0°
+  const targetAngle = 360 - (targetIdx * arc + arc / 2);
+  const extraSpins = 5 + Math.floor(Math.random() * 4); // 5–8 full rotations
+  const finalAngle = extraSpins * 360 + targetAngle;
+
+  const duration = 4000 + Math.random() * 1000; // 4–5s
+  const start = performance.now();
+  const startAngle = wheelAngle % 360;
+
+  function easeOut(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  function animate(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOut(progress);
+    wheelAngle = startAngle + finalAngle * eased;
+    drawWheel(wheelAngle);
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      wheelAngle = (startAngle + finalAngle) % 360;
+      wheelSpinning = false;
+      wheelSelected = WHEEL_SEGMENTS[targetIdx].game;
+
+      // Show result
+      const name = WHEEL_SEGMENTS[targetIdx].label;
+      const resultName = document.getElementById('wheel-result-name');
+      if (resultName) resultName.textContent = name;
+      if (resultEl) resultEl.style.display = 'block';
+      if (btnEl) { btnEl.style.display = 'none'; }
+      document.getElementById('wheel-spin-wrap').querySelector('p').style.display = 'none';
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+
+function wheelPlaySelected() {
+  if (wheelSelected) selectMinigame(wheelSelected);
+}
+
+// Ctrl+Enter shortcut
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+    const screen = document.getElementById('minigame-select');
+    if (screen && screen.classList.contains('active')) spinWheel();
+  }
+});
+
+function initWheelScreen() {
+  // Reset state
+  wheelSelected = null;
+  wheelSpinning = false;
+  const resultEl = document.getElementById('wheel-result');
+  const btnEl    = document.getElementById('wheel-spin-btn');
+  const spinWrap = document.getElementById('wheel-spin-wrap');
+  if (resultEl) resultEl.style.display = 'none';
+  if (btnEl) { btnEl.disabled = false; btnEl.style.display = ''; btnEl.textContent = '🌀 SPIN'; }
+  if (spinWrap) { const p = spinWrap.querySelector('p'); if (p) p.style.display = ''; }
+  drawWheel(wheelAngle);
+
+  // Make canvas clickable
+  const canvas = document.getElementById('spin-wheel');
+  if (canvas) {
+    canvas.onclick = spinWheel;
+  }
+}

@@ -144,45 +144,44 @@
        SCREEN 3 — MINIGAME SELECT
   ══════════════════════════════════════════ -->
   <div id="minigame-select" class="screen">
-    <div class="container">
-      <div class="minigame-header">
-        <h2>🎰 Choose Your Minigame</h2>
-        <p style="color:var(--text-secondary)">Bet your points to multiply them — or skip and move on.</p>
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;gap:16px">
+      <div class="minigame-header" style="text-align:center">
+        <h2>🎰 Spin for Your Minigame</h2>
+        <p style="color:var(--text-secondary)">Spin the wheel to discover your fate — or skip and move on.</p>
       </div>
 
-      <div class="minigame-grid">
-
-        <div class="minigame-card" data-game="blackjack">
-          <div class="minigame-emoji">🃏</div>
-          <div class="minigame-name">Blackjack</div>
-          <div class="minigame-desc">Beat the dealer! Get as close to 21 as you can without going over.</div>
-        </div>
-
-        <div class="minigame-card" data-game="roulette">
-          <div class="minigame-emoji">🎡</div>
-          <div class="minigame-name">Roulette</div>
-          <div class="minigame-desc">Spin the wheel! Bet on red/black or pick a lucky number for 35× payout.</div>
-        </div>
-
-        <div class="minigame-card" data-game="dice">
-          <div class="minigame-emoji">🎲</div>
-          <div class="minigame-name">Dice Duel</div>
-          <div class="minigame-desc">Roll 2 dice against the dealer. Higher total wins. Go double-or-nothing!</div>
-        </div>
-
-        <div class="minigame-card" data-game="highlow">
-          <div class="minigame-emoji">⬆️⬇️</div>
-          <div class="minigame-name">High / Low</div>
-          <div class="minigame-desc">Guess if the next card is higher or lower. Build a streak for bigger multipliers!</div>
-        </div>
-
+      <!-- Wheel wrapper -->
+      <div style="position:relative;width:340px;height:340px;flex-shrink:0">
+        <!-- Pointer arrow -->
+        <div id="wheel-pointer" style="
+          position:absolute;right:-18px;top:50%;transform:translateY(-50%);
+          width:0;height:0;
+          border-top:14px solid transparent;
+          border-bottom:14px solid transparent;
+          border-right:28px solid #22c55e;
+          z-index:10;filter:drop-shadow(0 0 6px #22c55e88);
+        "></div>
+        <canvas id="spin-wheel" width="340" height="340" style="cursor:pointer;border-radius:50%;box-shadow:0 0 40px rgba(34,197,94,0.2)"></canvas>
       </div>
 
-      <div style="text-align:center;margin-top:24px">
-        <button class="btn btn-secondary" onclick="leaveMiniGame()">
-          Skip → Next Level
+      <!-- Result banner (hidden until spin complete) -->
+      <div id="wheel-result" style="display:none;text-align:center;animation:fadeIn 0.4s ease">
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:8px">You got:</p>
+        <h3 id="wheel-result-name" style="font-size:1.6rem;color:var(--accent);margin:0 0 16px"></h3>
+        <button class="btn btn-primary" id="wheel-play-btn" onclick="wheelPlaySelected()">Play Now →</button>
+      </div>
+
+      <!-- Spin button (hidden after spin) -->
+      <div id="wheel-spin-wrap" style="text-align:center">
+        <button class="btn btn-primary" id="wheel-spin-btn" onclick="spinWheel()" style="font-size:1.1rem;padding:12px 36px;letter-spacing:1px">
+          🌀 SPIN
         </button>
+        <p style="color:var(--text-secondary);font-size:0.8rem;margin-top:8px">or press Ctrl+Enter</p>
       </div>
+
+      <button class="btn btn-secondary" onclick="leaveMiniGame()" style="margin-top:4px">
+        Skip → Next Level
+      </button>
     </div>
   </div>
 

@@ -1190,3 +1190,8 @@ p { line-height: 1.6; }
 
 /* ─── Selection ─── */
 ::selection { background: rgba(34, 197, 94, 0.25); color: var(--text-primary); }
+
+/* ── Spin Wheel ── */
+#spin-wheel { display:block; }
+#wheel-result { min-height: 80px; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
