@@ -40,9 +40,20 @@ class QuestionEngine:
         self._questions_by_id = {}
         self._questions_by_level = {}
 
+        LEVEL_STR_TO_NUM = {
+            "beginner": 1,
+            "intermediate": 2,
+            "advanced": 3,
+            "expert": 4,
+        }
+
         for q in self.questions:
             qid = q.get("id")
             level = q.get("level")
+            # Normalise string levels to numbers
+            if isinstance(level, str):
+                level = LEVEL_STR_TO_NUM.get(level.lower(), None)
+                q["level"] = level  # update in place so get_question_by_id works too
             if qid:
                 self._questions_by_id[qid] = q
             if level is not None:
