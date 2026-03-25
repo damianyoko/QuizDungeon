@@ -985,6 +985,42 @@ p { line-height: 1.7; }
   width: 100%;
 }
 
+.roulette-bet-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+.roulette-bet-label:hover {
+  border-color: var(--accent-gold);
+  background: rgba(212,175,55,0.08);
+}
+.roulette-bet-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-gold);
+  cursor: pointer;
+}
+.roulette-bet-label input[type="checkbox"]:checked + * {
+  color: var(--accent-yellow);
+}
+.roulette-bet-label:has(input:checked) {
+  border-color: var(--accent-gold);
+  background: rgba(212,175,55,0.12);
+}
+.bet-odds {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
 /* Dice — bone/ivory feel */
 .dice-display {
   display: flex;

@@ -509,16 +509,25 @@ function renderMinigamePlay(game) {
       <div class="roulette-wheel" id="roulette-wheel">
         <div class="roulette-center" id="roulette-result">?</div>
       </div>
-      ${betHtml}
-      <div class="roulette-bets">
-        <button class="btn btn-secondary" onclick="playRoulette('red')">🔴 Red (1:1)</button>
-        <button class="btn btn-secondary" onclick="playRoulette('black')">⚫ Black (1:1)</button>
-        <button class="btn btn-secondary" onclick="playRoulette('even')">2️⃣ Even (1:1)</button>
-        <button class="btn btn-secondary" onclick="playRoulette('odd')">1️⃣ Odd (1:1)</button>
-      </div>
-      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-        <input type="number" id="straight-up-num" placeholder="0-36" min="0" max="36" style="width:80px;padding:8px;background:var(--bg-secondary);border:2px solid var(--border-color);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.9rem" />
-        <button class="btn btn-outline" onclick="playRouletteStraight()">Straight Up (35:1)</button>
+      <div style="background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius);padding:14px;margin-top:8px">
+        <div style="font-weight:700;font-size:0.85rem;color:var(--text-secondary);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em">Place Your Bets</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+          <label class="roulette-bet-label"><input type="checkbox" class="roulette-bet-check" value="red" onchange="rouletteToggleBet(this)"> 🔴 Red <span class="bet-odds">(1:1)</span></label>
+          <label class="roulette-bet-label"><input type="checkbox" class="roulette-bet-check" value="black" onchange="rouletteToggleBet(this)"> ⚫ Black <span class="bet-odds">(1:1)</span></label>
+          <label class="roulette-bet-label"><input type="checkbox" class="roulette-bet-check" value="even" onchange="rouletteToggleBet(this)"> 2️⃣ Even <span class="bet-odds">(1:1)</span></label>
+          <label class="roulette-bet-label"><input type="checkbox" class="roulette-bet-check" value="odd" onchange="rouletteToggleBet(this)"> 1️⃣ Odd <span class="bet-odds">(1:1)</span></label>
+          <label class="roulette-bet-label" style="grid-column:1/-1;display:flex;align-items:center;gap:8px">
+            <input type="checkbox" class="roulette-bet-check" value="straight" onchange="rouletteToggleBet(this)"> 🎯 Straight Up <span class="bet-odds">(35:1)</span>
+            <input type="number" id="straight-up-num" placeholder="0-36" min="0" max="36" style="width:70px;padding:6px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);color:var(--text-primary);font-size:0.9rem" />
+          </label>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <label style="font-size:0.85rem;color:var(--text-secondary)">Bet per selection:</label>
+          <input type="number" id="bet-input" class="bet-input" value="${defaultBet}" min="1" max="${maxBet}" style="width:80px" />
+          <span id="max-bet-label" class="text-muted" style="font-size:0.8rem">max: ${maxBet}</span>
+        </div>
+        <div id="roulette-total-display" style="font-size:0.85rem;color:var(--accent-yellow);margin-bottom:10px">Total bet: 0 pts across 0 selections</div>
+        <button class="btn btn-primary" onclick="playRouletteMulti()" style="width:100%">🎡 Spin!</button>
       </div>`;
   } else if (game === 'dice') {
     gameArea.innerHTML = `
@@ -635,12 +644,40 @@ function handleBJResult(res, action) {
 }
 
 // ─── Roulette ─────────────────────────────────
-async function playRoulette(betType) {
-  if (App.rouletteSpinning) return;
-  App.rouletteSpinning = true;
-  const bet = parseInt($('bet-input')?.value || '10', 10);
+App.rouletteBets = new Set();
 
-  // Spin animation
+function rouletteToggleBet(checkbox) {
+  if (checkbox.checked) {
+    App.rouletteBets.add(checkbox.value);
+  } else {
+    App.rouletteBets.delete(checkbox.value);
+  }
+  rouletteUpdateTotal();
+}
+
+function rouletteUpdateTotal() {
+  const bet = parseInt($('bet-input')?.value || '0', 10);
+  const count = App.rouletteBets.size;
+  const totalEl = $('roulette-total-display');
+  if (totalEl) totalEl.textContent = `Total bet: ${bet * count} pts across ${count} selection${count !== 1 ? 's' : ''}`;
+}
+
+async function playRouletteMulti() {
+  if (App.rouletteSpinning) return;
+  if (App.rouletteBets.size === 0) { toast('Select at least one bet!', 'error'); return; }
+
+  const bet = parseInt($('bet-input')?.value || '10', 10);
+  const bets = Array.from(App.rouletteBets);
+
+  // Handle straight up — need a number
+  if (bets.includes('straight')) {
+    const num = parseInt($('straight-up-num')?.value || '-1', 10);
+    if (isNaN(num) || num < 0 || num > 36) { toast('Enter a valid number 0-36 for Straight Up', 'error'); return; }
+    bets[bets.indexOf('straight')] = String(num);
+  }
+
+  App.rouletteSpinning = true;
+
   const wheel = $('roulette-wheel');
   if (wheel) {
     const deg = 1440 + Math.random() * 360;
@@ -652,29 +689,21 @@ async function playRoulette(betType) {
   try {
     const res = await apiFetch('/api/minigame/play', {
       method: 'POST',
-      body: JSON.stringify({ game: 'roulette', bet, action: { bet_type: betType } }),
+      body: JSON.stringify({ game: 'roulette', bet, action: { bet_types: bets } }),
     });
     setTimeout(() => {
       App.rouletteSpinning = false;
-      if (resultEl) {
-        const colorEmoji = { red: '🔴', black: '⚫', green: '🟢' };
-        resultEl.textContent = res.spin ?? '?';
-      }
+      if (resultEl) resultEl.textContent = res.spin ?? '?';
       showMGResult(res.message, res.result);
       updatePointsDisplay(res.current_points);
+      // Uncheck all after spin
+      document.querySelectorAll('.roulette-bet-check').forEach(c => { c.checked = false; });
+      App.rouletteBets.clear();
+      rouletteUpdateTotal();
     }, 1600);
   } catch (e) {
     App.rouletteSpinning = false;
   }
-}
-
-async function playRouletteStraight() {
-  const num = parseInt($('straight-up-num')?.value || '-1', 10);
-  if (isNaN(num) || num < 0 || num > 36) {
-    toast('Enter a number 0-36', 'error');
-    return;
-  }
-  await playRoulette(String(num));
 }
 
 // ─── Dice ─────────────────────────────────────
@@ -1001,7 +1030,7 @@ async function loadNextBossQuestion() {
 
 // ─── Game Over ────────────────────────────────
 function showGameOver(state) {
-  submitScore(data?.points || 0, data?.level || 1);
+  submitScore(state?.points || 0, state?.level || 1);
   clearBossTimer();
   const score = state.points || 0;
   const isNewRecord = setLocalHighScore(score);
@@ -1022,7 +1051,7 @@ function showGameOver(state) {
 
 // ─── Victory ─────────────────────────────────
 function showVictory(state) {
-  submitScore(data?.points || 0, data?.level || 5);
+  submitScore(state?.points || 0, state?.level || 5);
   clearBossTimer();
   const score = state.points || 0;
   const isNewRecord = setLocalHighScore(score);

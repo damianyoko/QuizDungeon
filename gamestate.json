@@ -1,24 +1,24 @@
 {
-  "lives": 3,
-  "points": 0,
-  "level": 2,
+  "lives": -1,
+  "points": 165,
+  "level": 5,
   "current_round_questions": [
-    "i07",
-    "i10",
-    "i09",
-    "i06",
-    "i01",
-    "i02",
-    "i03",
-    "i08",
-    "i04",
-    "i05"
+    "a11",
+    "a06",
+    "a09",
+    "e05",
+    "a22",
+    "e13",
+    "a26",
+    "e22",
+    "a29",
+    "e24"
   ],
-  "current_question_index": 0,
-  "phase": "question",
-  "round_number": 2,
-  "questions_answered_this_round": 0,
-  "boss_active": false,
+  "current_question_index": 4,
+  "phase": "gameover",
+  "round_number": 5,
+  "questions_answered_this_round": 4,
+  "boss_active": true,
   "boss_time_limit": 10,
-  "high_score": 450
+  "high_score": 2158
 }

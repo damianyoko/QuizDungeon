@@ -129,8 +129,9 @@ def api_minigame_play():
         result["current_points"] = game_engine.state.get("points", 0)
 
     elif game == "roulette":
-        bet_type = action_data.get("bet_type", "red")
-        result = minigame_engine.roulette(bet, bet_type)
+        bet_types = action_data.get("bet_types")   # new multi-bet list
+        bet_type  = action_data.get("bet_type")    # legacy single bet
+        result = minigame_engine.roulette(bet, bet_type=bet_type, bet_types=bet_types)
         if result.get("points_delta", 0) != 0:
             game_engine.apply_minigame_result(result["points_delta"])
         result["current_points"] = game_engine.state.get("points", 0)

@@ -209,54 +209,81 @@ class MinigameEngine:
     # ─────────────────────────────────────────────
     RED_NUMBERS = {1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36}
 
-    def roulette(self, bet, bet_type):
+    def _eval_bet(self, bet_type_lower, spin, color):
+        """Evaluate a single bet type against the spin result. Returns (win, payout_mult) or None on error."""
+        if bet_type_lower == "red":
+            return color == "red", 1
+        elif bet_type_lower == "black":
+            return color == "black", 1
+        elif bet_type_lower == "even":
+            return spin != 0 and spin % 2 == 0, 1
+        elif bet_type_lower == "odd":
+            return spin != 0 and spin % 2 == 1, 1
+        elif bet_type_lower.isdigit():
+            return spin == int(bet_type_lower), 35
+        return None, None
+
+    def roulette(self, bet, bet_type=None, bet_types=None):
         """
         Spin the roulette wheel (0-36).
-        bet_type: "red" | "black" | "even" | "odd" | number (0-36 as string)
+        bet_type: single bet (legacy) "red"|"black"|"even"|"odd"|number
+        bet_types: list of bets — each costs `bet` points, wins/losses calculated independently.
         Returns: {spin, result, points_delta, message}
         """
         self._new_seed()
         spin = self.rng.randint(0, 36)
-        spin_str = str(spin)
         color = "green" if spin == 0 else ("red" if spin in self.RED_NUMBERS else "black")
-
-        bet_type_lower = str(bet_type).lower().strip()
-        win = False
-
-        if bet_type_lower == "red":
-            win = color == "red"
-            payout_mult = 1
-        elif bet_type_lower == "black":
-            win = color == "black"
-            payout_mult = 1
-        elif bet_type_lower == "even":
-            win = spin != 0 and spin % 2 == 0
-            payout_mult = 1
-        elif bet_type_lower == "odd":
-            win = spin != 0 and spin % 2 == 1
-            payout_mult = 1
-        elif bet_type_lower.isdigit():
-            target = int(bet_type_lower)
-            win = spin == target
-            payout_mult = 35  # Straight-up pays 35:1
-        else:
-            return {"error": f"Unknown bet type: {bet_type}"}
-
-        points_delta = int(bet * payout_mult) if win else -bet
         color_emoji = {"red": "🔴", "black": "⚫", "green": "🟢"}.get(color, "")
 
-        if win:
-            message = f"{color_emoji} Landed on {spin}! You win {abs(points_delta)} points!"
+        # Support both single and multiple bets
+        bets = bet_types if bet_types else ([bet_type] if bet_type else [])
+        bets = [str(b).lower().strip() for b in bets]
+
+        if not bets:
+            return {"error": "No bet specified"}
+
+        total_delta = 0
+        winners = []
+        losers = []
+
+        for bt in bets:
+            win, payout_mult = self._eval_bet(bt, spin, color)
+            if win is None:
+                continue
+            if win:
+                total_delta += int(bet * payout_mult)
+                winners.append(bt)
+            else:
+                total_delta -= bet
+                losers.append(bt)
+
+        overall_win = total_delta > 0
+
+        if len(bets) == 1:
+            # Single bet message (original behaviour)
+            if overall_win:
+                message = f"{color_emoji} Landed on {spin}! You win {abs(total_delta)} points!"
+            else:
+                message = f"{color_emoji} Landed on {spin}. You lose {bet} points."
         else:
-            message = f"{color_emoji} Landed on {spin}. You lose {bet} points."
+            # Multi-bet message
+            won_str = ", ".join(winners) if winners else "none"
+            msg_parts = [f"{color_emoji} Landed on {spin}!"]
+            if winners:
+                msg_parts.append(f"Won: {won_str}.")
+            if losers:
+                msg_parts.append(f"Lost: {', '.join(losers)}.")
+            net = f"+{total_delta}" if total_delta >= 0 else str(total_delta)
+            msg_parts.append(f"Net: {net} pts.")
+            message = " ".join(msg_parts)
 
         return {
             "spin": spin,
             "color": color,
-            "result": "win" if win else "lose",
-            "points_delta": points_delta,
+            "result": "win" if overall_win else "lose",
+            "points_delta": total_delta,
             "message": message,
-            "bet_type": bet_type,
+            "bet_types": bets,
         }
 
     # ─────────────────────────────────────────────
